@@ -1,7 +1,17 @@
 import logo from './logo.svg';
 import './App.css';
+import SelectorBuilder from './components/SelectorBuilder/SelectorBuilder';
+import { useState } from 'react';
 
 function App() {
+  const [ready, setReady] = useState(false);
+
+  if (!ready) setTimeout(() => setReady(true), 1000);
+  const defaultNode = {
+    followables: ['elements', 'classes', 'ids', 'attributes', 'psuedos'],
+    selector: '',
+    type: 'element'
+  };
   return (
     <div className="App">
       <header className="App-header">
@@ -17,7 +27,9 @@ function App() {
         >
           Learn React
         </a>
+        
       </header>
+      <SelectorBuilder ready={ready} baseSelector={'.App-header'} defaultNode={defaultNode} />
     </div>
   );
 }

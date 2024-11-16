@@ -1,0 +1,87 @@
+
+{
+    "elements": {
+        "followables": ["classes", "ids", "attributes", "opperators", "psuedos"],
+        "options": [{ "value":"*" }]
+    },
+    "classes": {
+        "followables": ["classes", "ids", "attributes", "opperators", "psuedos"],
+        "options": []
+    },
+    "ids": {
+        "followables": ["classes", "ids", "attributes", "opperators", "psuedos"],
+        "options": []
+    },
+    "attributes": {
+        "followables": ["classes", "ids", "attributes", "opperators", "psuedos"],
+        "options": [],
+        "bracketedValues": true
+    },
+    "opperators": {
+        "followables": ["elements", "classes", "ids", "attributes", "psuedos"],
+        "options": [
+            { "label": "descendent ( )", "value": "( )" },
+            { "label": "child (>)", "value": "(>)" },
+            { "label": "next sibling (+)", "value": "(+)" },
+            { "label": "following sibling (~)", "value": "(~)" },
+            { "label": "and (,)", "value": "(,)" }
+        ]
+    },
+    "psuedos": {
+        "followables": ["classes", "ids", "attributes", "opperators", "psuedos"],
+        "options": [
+            { "value": "active" },
+            { "value": "any-link" },
+            { "value": "checked" },
+            { "value": "blank" },
+            { "value": "default" },
+            { "value": "defined" },
+            { "value": "dir", "argStructure": {} },
+            { "value": "disabled" },
+            { "value": "empty" },
+            { "value": "enabled" },
+            { "value": "first" },
+            { "value": "first-child" },
+            { "value": "first-of-type" },
+            { "value": "fullscreen" },
+            { "value": "focus" },
+            { "value": "focus-visible" },
+            { "value": "focus-within" },
+            { "value": "has", "argStructure": {} },
+            { "value": "host", "argStructure": {} },
+            { "value": "host-context", "argStructure": {} },
+            { "value": "hover" },
+            { "value": "indeterminate" },
+            { "value": "in-range" },
+            { "value": "invalid" },
+            { "value": "is", "argStructure": {} },
+            { "value": "matches", "argStructure": {} },
+            { "value": "any", "argStructure": {} },
+            { "value": "lang", "argStructure": {} },
+            { "value": "last-child" },
+            { "value": "last-of-type" },
+            { "value": "left" },
+            { "value": "link" },
+            { "value": "not", "argStructure": {} },
+            { "value": "nth-child", "argStructure": {} },
+            { "value": "nth-last-child", "argStructure": {} },
+            { "value": "nth-last-of-type", "argStructure": {} },
+            { "value": "nth-of-type", "argStructure": {} },
+            { "value": "only-child" },
+            { "value": "only-of-type" },
+            { "value": "optional" },
+            { "value": "out-of-range" },
+            { "value": "placeholder-shown" },
+            { "value": "read-only" },
+            { "value": "read-write" },
+            { "value": "required" },
+            { "value": "right" },
+            { "value": "root" },
+            { "value": "scope" },
+            { "value": "target" },
+            { "value": "valid" },
+            { "value": "visited" },
+            { "value": "where", "argStructure": {} }
+        ]
+    }
+}
