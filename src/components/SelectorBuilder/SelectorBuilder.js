@@ -13,8 +13,7 @@ const SelectorBuilder = (props) => {
     useEffect(() => { setActive(true) }, [props.ready])
 
     const createBuildMatrix = (entry) => {
-        // return buildMatrix(false, `${props.baseSelector} ${entry.selector}`, entry.followables, selectorData);
-        return buildMatrix(false, props.baseSelector, entry, selectorData);
+        return buildMatrix(entry.selector === '', props.baseSelector, entry, selectorData);
     }
     
     const processSelection = (data) => {
@@ -68,7 +67,7 @@ const SelectorBuilder = (props) => {
                 {renderBuilderNode(props.defaultNode, -1)}
                 { nodeData.map((item, i) => renderBuilderNode(item, i)) }
                 
-                {`${props.baseSelector} ${selectorValue.split('(').join(' ').split(')').join(' ')}`}
+                {selectorValue.split('(').join(' ').split(')').join(' ')}
             </div>}
         </div>
     );

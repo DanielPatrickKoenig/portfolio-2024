@@ -1,6 +1,7 @@
 import logo from './logo.svg';
 import './App.css';
 import SelectorBuilder from './components/SelectorBuilder/SelectorBuilder';
+import Template from './components/Template/Template';
 import { useState } from 'react';
 
 function App() {
@@ -29,7 +30,8 @@ function App() {
         </a>
         
       </header>
-      <SelectorBuilder ready={ready} baseSelector={'.App-header'} defaultNode={defaultNode} />
+      <Template />
+      <SelectorBuilder ready={ready} baseSelector={'.template-content'} defaultNode={defaultNode} />
     </div>
   );
 }

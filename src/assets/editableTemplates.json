@@ -1,0 +1,17 @@
+[
+    {
+        "name": "button",
+        "content": "<button>Do Stuff</button>",
+        "selectors": ["button"]
+    },
+    {
+        "name": "paragraphs",
+        "content": "<p>First paragraph</p><p>Second paragraph</p>",
+        "selectors": ["p", "p:first-child", "p ~ p"]
+    },
+    {
+        "name": "2 buttons",
+        "content": "<button class=\"primary-button\">Do This</button> <button class=\"secondary-button\">Do That</button>",
+        "selectors": ["button", "button:first-child", "button ~ button", ".primary-button", ".secondary-button"]
+    }
+]
