@@ -1,0 +1,29 @@
+[
+    {
+        "name": "space",
+        "units": [
+            "px",
+            "em",
+            "rem",
+            "ex",
+            "%",
+            "cm",
+            "mm",
+            "in",
+            "pt",
+            "pc",
+            "ch",
+            "vh",
+            "vw",
+            "vmin",
+            "vmax"
+        ]
+    },
+    {
+        "name": "time",
+        "units": [
+            "s",
+            "ms"
+        ]
+    }
+]

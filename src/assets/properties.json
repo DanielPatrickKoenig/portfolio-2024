@@ -1,199 +1,539 @@
 [
     {
         "name": "accent-color",
-        "defenition": "Specifies an accent color for user-interface controls"
+        "defenition": "Specifies an accent color for user-interface controls",
+        "editors": [
+            {
+                "type": "color",
+                "subType": ""
+            }
+        ]
     },
     {
         "name": "align-content",
-        "defenition": "Specifies the alignment between the lines inside a flexible container when the items do not use all available space"
+        "defenition": "Specifies the alignment between the lines inside a flexible container when the items do not use all available space",
+        "editors": [
+            {
+                "type": "enum",
+                "subType": "flex-align"
+            }
+        ]
     },
     {
         "name": "align-items",
-        "defenition": "Specifies the alignment for items inside a flexible container"
+        "defenition": "Specifies the alignment for items inside a flexible container",
+        "editors": [
+            {
+                "type": "enum",
+                "subType": "flex-align"
+            }
+        ]
     },
     {
         "name": "align-self",
-        "defenition": "Specifies the alignment for selected items inside a flexible container"
+        "defenition": "Specifies the alignment for selected items inside a flexible container",
+        "editors": [
+            {
+                "type": "enum",
+                "subType": "flex-align"
+            }
+        ]
     },
     {
         "name": "all",
-        "defenition": "Resets all properties (except unicode-bidi and direction)"
+        "defenition": "Resets all properties (except unicode-bidi and direction)",
+        "editors": []
     },
     {
         "name": "animation",
-        "defenition": "A shorthand property for all the animation-* properties"
+        "defenition": "A shorthand property for all the animation-* properties",
+        "editors": [
+            {
+                "type": "composite",
+                "subType": "animation"
+            }
+        ]
     },
     {
         "name": "animation-delay",
-        "defenition": "Specifies a delay for the start of an animation"
+        "defenition": "Specifies a delay for the start of an animation",
+        "editors": [
+            {
+                "type": "unit",
+                "subType": "time"
+            }
+        ]
     },
     {
         "name": "animation-direction",
-        "defenition": "Specifies whether an animation should be played forwards, backwards or in alternate cycles"
+        "defenition": "Specifies whether an animation should be played forwards, backwards or in alternate cycles",
+        "editors": [
+            {
+                "type": "enum",
+                "subType": "animation-direction"
+            }
+        ]
     },
     {
         "name": "animation-duration",
-        "defenition": "Specifies how long an animation should take to complete one cycle"
+        "defenition": "Specifies how long an animation should take to complete one cycle",
+        "editors": [
+            {
+                "type": "unit",
+                "subType": "time"
+            }
+        ]
     },
     {
         "name": "animation-fill-mode",
-        "defenition": "Specifies a style for the element when the animation is not playing (before it starts, after it ends, or both)"
+        "defenition": "Specifies a style for the element when the animation is not playing (before it starts, after it ends, or both)",
+        "editors": [
+            {
+                "type": "enum",
+                "subType": "fill-mode"
+            }
+        ]
     },
     {
         "name": "animation-iteration-count",
-        "defenition": "Specifies the number of times an animation should be played"
+        "defenition": "Specifies the number of times an animation should be played",
+        "editors": [
+            {
+                "type": "number",
+                "subType": ""
+            },
+            {
+                "type": "enum",
+                "subType": "iteration-count"
+            }
+        ]
     },
     {
         "name": "animation-name",
-        "defenition": "Specifies a name for the @keyframes animation"
+        "defenition": "Specifies a name for the @keyframes animation",
+        "editors": [
+            {
+                "type": "keyframe",
+                "subType": ""
+            }
+        ]
     },
     {
         "name": "animation-play-state",
-        "defenition": "Specifies whether the animation is running or paused"
+        "defenition": "Specifies whether the animation is running or paused",
+        "editors": [
+            {
+                "type": "enum",
+                "subType": "play-state"
+            }
+        ]
     },
     {
         "name": "animation-timing-function",
-        "defenition": "Specifies the speed curve of an animation"
+        "defenition": "Specifies the speed curve of an animation",
+        "editors": [
+            {
+                "type": "tool",
+                "subType": "curve"
+            },
+            {
+                "type": "tool",
+                "subType": "line"
+            },
+            {
+                "type": "tool",
+                "subType": "step"
+            },
+            {
+                "type": "enum",
+                "subType": "timeing-function"
+            }
+        ]
     },
     {
         "name": "aspect-ratio",
-        "defenition": "Specifies preferred aspect ratio of an element"
+        "defenition": "Specifies preferred aspect ratio of an element",
+        "editors": [
+            {
+                "type": "number",
+                "subType": ""
+            }
+        ]
     },
     {
         "name": "backdrop-filter",
-        "defenition": "Defines a graphical effect to the area behind an element"
+        "defenition": "Defines a graphical effect to the area behind an element",
+        "editors": [
+            {
+                "type": "tool",
+                "subType": "filter"
+            }
+        ]
+
     },
     {
         "name": "backface-visibility",
-        "defenition": "Defines whether or not the back face of an element should be visible when facing the user"
+        "defenition": "Defines whether or not the back face of an element should be visible when facing the user",
+        "editors": [
+            {
+                "type": "enum",
+                "subType": "backface-visibility"
+            }
+        ]
     },
     {
         "name": "background",
-        "defenition": "A shorthand property for all the background-* properties"
+        "defenition": "A shorthand property for all the background-* properties",
+        "editors": [
+            {
+                "type": "composite",
+                "subType": "animation"
+            }
+        ]
     },
     {
         "name": "background-attachment",
-        "defenition": "Sets whether a background image scrolls with the rest of the page, or is fixed"
+        "defenition": "Sets whether a background image scrolls with the rest of the page, or is fixed",
+        "editors": [
+            {
+                "type": "enum",
+                "subType": "attachment"
+            }
+        ]
     },
     {
         "name": "background-blend-mode",
-        "defenition": "Specifies the blending mode of each background layer (color/image)"
+        "defenition": "Specifies the blending mode of each background layer (color/image)",
+        "editors": [
+            {
+                "type": "enum",
+                "subType": "blend-mode"
+            }
+        ]
     },
     {
         "name": "background-clip",
-        "defenition": "Defines how far the background (color or image) should extend within an element"
+        "defenition": "Defines how far the background (color or image) should extend within an element",
+        "editors": [
+            {
+                "type": "enum",
+                "subType": "background-clip"
+            }
+        ]
     },
     {
         "name": "background-color",
-        "defenition": "Specifies the background color of an element"
+        "defenition": "Specifies the background color of an element",
+        "editors": [
+            {
+                "type": "color",
+                "subType": ""
+            }
+        ]
     },
     {
         "name": "background-image",
-        "defenition": "Specifies one or more background images for an element"
+        "defenition": "Specifies one or more background images for an element",
+        "editors": [
+            {
+                "type": "string",
+                "subType": "url"
+            },
+            {
+                "type": "tool",
+                "subType": "gradient"
+            }
+        ]
     },
     {
         "name": "background-origin",
-        "defenition": "Specifies the origin position of a background image"
+        "defenition": "Specifies the origin position of a background image",
+        "editors": [
+            {
+                "type": "enum",
+                "subType": "background-origin"
+            }
+        ]
     },
     {
         "name": "background-position",
-        "defenition": "Specifies the position of a background image"
+        "defenition": "Specifies the position of a background image",
+        "editors": [
+            {
+                "type": "unit",
+                "subType": "space"
+            },
+            {
+                "type": "enum",
+                "subType": "background-position"
+            }
+        ],
+        "max": 4
     },
     {
         "name": "background-position-x",
-        "defenition": "Specifies the position of a background image on x-axis"
+        "defenition": "Specifies the position of a background image on x-axis",
+        "editors": [
+            {
+                "type": "unit",
+                "subType": "space"
+            },
+            {
+                "type": "enum",
+                "subType": "background-position"
+            }
+        ]
     },
     {
         "name": "background-position-y",
-        "defenition": "Specifies the position of a background image on y-axis"
+        "defenition": "Specifies the position of a background image on y-axis",
+        "editors": [
+            {
+                "type": "unit",
+                "subType": "space"
+            },
+            {
+                "type": "enum",
+                "subType": "background-position"
+            }
+        ]
     },
     {
         "name": "background-repeat",
-        "defenition": "Sets if/how a background image will be repeated"
+        "defenition": "Sets if/how a background image will be repeated",
+        "editors": [
+            {
+                "type": "enum",
+                "subType": "background-repeat"
+            }
+        ]
     },
     {
         "name": "background-size",
-        "defenition": "Specifies the size of the background images"
+        "defenition": "Specifies the size of the background images",
+        "editors": [
+            {
+                "type": "unit",
+                "subType": "space"
+            },
+            {
+                "type": "enum",
+                "subType": "background-size"
+            }
+        ],
+        "max": 2
     },
     {
         "name": "block-size",
-        "defenition": "Specifies the size of an element in block direction"
+        "defenition": "Specifies the size of an element in block direction",
+        "editors": [
+            {
+                "type": "unit",
+                "subType": "space"
+            },
+            {
+                "type": "tool",
+                "subType": "anchor-size"
+            },
+            {
+                "type": "tool",
+                "subType": "fit-content"
+            },
+            {
+                "type": "enum",
+                "subType": "block-size"
+            }
+        ]
     },
     {
         "name": "border",
-        "defenition": "A shorthand property for border-width, border-style and border-color"
+        "defenition": "A shorthand property for border-width, border-style and border-color",
+        "editors": [
+            {
+                "type": "composite",
+                "subType": "border"
+            }
+        ]
     },
     {
         "name": "border-block",
-        "defenition": "A shorthand property for border-block-width, border-block-style and border-block-color"
+        "defenition": "A shorthand property for border-block-width, border-block-style and border-block-color",
+        "editors": [
+            {
+                "type": "composite",
+                "subType": "border"
+            }
+        ]
     },
     {
         "name": "border-block-color",
-        "defenition": "Sets the color of the borders at start and end in the block direction"
+        "defenition": "Sets the color of the borders at start and end in the block direction",
+        "editors": [
+            {
+                "type": "color",
+                "subType": ""
+            }
+        ]
     },
     {
         "name": "border-block-end",
-        "defenition": "A shorthand property for border-block-end-width, border-block-end-style and border-block-end-color"
+        "defenition": "A shorthand property for border-block-end-width, border-block-end-style and border-block-end-color",
+        "editors": [
+            {
+                "type": "composite",
+                "subType": "border"
+            }
+        ]
     },
     {
         "name": "border-block-end-color",
-        "defenition": "Sets the color of the border at the end in the block direction"
+        "defenition": "Sets the color of the border at the end in the block direction",
+        "editors": [
+            {
+                "type": "color",
+                "subType": ""
+            }
+        ]
     },
     {
         "name": "border-block-end-style",
-        "defenition": "Sets the style of the border at the end in the block direction"
+        "defenition": "Sets the style of the border at the end in the block direction",
+        "editors": [
+            {
+                "type": "enum",
+                "subType": "border-style"
+            }
+        ]
     },
     {
         "name": "border-block-end-width",
-        "defenition": "Sets the width of the border at the end in the block direction"
+        "defenition": "Sets the width of the border at the end in the block direction",
+        "editors": [
+            {
+                "type": "unit",
+                "subType": "space"
+            }
+        ]
     },
     {
         "name": "border-block-start",
-        "defenition": "A shorthand property for border-block-start-width, border-block-start-style and border-block-start-color"
+        "defenition": "A shorthand property for border-block-start-width, border-block-start-style and border-block-start-color",
+        "editors": [
+            {
+                "type": "composite",
+                "subType": "border"
+            }
+        ]
     },
     {
         "name": "border-block-start-color",
-        "defenition": "Sets the color of the border at the start in the block direction"
+        "defenition": "Sets the color of the border at the start in the block direction",
+        "editors": [
+            {
+                "type": "color",
+                "subType": ""
+            }
+        ]
     },
     {
         "name": "border-block-start-style",
-        "defenition": "Sets the style of the border at the start in the block direction"
+        "defenition": "Sets the style of the border at the start in the block direction",
+        "editors": [
+            {
+                "type": "enum",
+                "subType": "border-style"
+            }
+        ]
     },
     {
         "name": "border-block-start-width",
-        "defenition": "Sets the width of the border at the start in the block direction"
+        "defenition": "Sets the width of the border at the start in the block direction",
+        "editors": [
+            {
+                "type": "unit",
+                "subType": "space"
+            }
+        ]
     },
     {
         "name": "border-block-style",
-        "defenition": "Sets the style of the borders at start and end in the block direction"
+        "defenition": "Sets the style of the borders at start and end in the block direction",
+        "editors": [
+            {
+                "type": "enum",
+                "subType": "border-style"
+            }
+        ]
     },
     {
         "name": "border-block-width",
-        "defenition": "Sets the width of the borders at start and end in the block direction"
+        "defenition": "Sets the width of the borders at start and end in the block direction",
+        "editors": [
+            {
+                "type": "unit",
+                "subType": "space"
+            }
+        ]
     },
     {
         "name": "border-bottom",
-        "defenition": "A shorthand property for border-bottom-width, border-bottom-style and border-bottom-color"
+        "defenition": "A shorthand property for border-bottom-width, border-bottom-style and border-bottom-color",
+        "editors": [
+            {
+                "type": "composite",
+                "subType": "border"
+            }
+        ]
     },
     {
         "name": "border-bottom-color",
-        "defenition": "Sets the color of the bottom border"
+        "defenition": "Sets the color of the bottom border",
+        "editors": [
+            {
+                "type": "color",
+                "subType": ""
+            }
+        ]
     },
     {
         "name": "border-bottom-left-radius",
-        "defenition": "Defines the radius of the border of the bottom-left corner"
+        "defenition": "Defines the radius of the border of the bottom-left corner",
+        "editors": [
+            {
+                "type": "unit",
+                "subType": "space"
+            }
+        ]
     },
     {
         "name": "border-bottom-right-radius",
-        "defenition": "Defines the radius of the border of the bottom-right corner"
+        "defenition": "Defines the radius of the border of the bottom-right corner",
+        "editors": [
+            {
+                "type": "unit",
+                "subType": "space"
+            }
+        ]
     },
     {
         "name": "border-bottom-style",
-        "defenition": "Sets the style of the bottom border"
+        "defenition": "Sets the style of the bottom border",
+        "editors": [
+            {
+                "type": "enum",
+                "subType": "border-style"
+            }
+        ]
     },
     {
         "name": "border-bottom-width",
-        "defenition": "Sets the width of the bottom border"
+        "defenition": "Sets the width of the bottom border",
+        "editors": [
+            {
+                "type": "unit",
+                "subType": "space"
+            }
+        ]
     },
     {
         "name": "border-collapse",
@@ -201,423 +541,1068 @@
     },
     {
         "name": "border-color",
-        "defenition": "Sets the color of the four borders"
+        "defenition": "Sets the color of the four borders",
+        "editors": [
+            {
+                "type": "color",
+                "subType": ""
+            }
+        ]
     },
     {
         "name": "border-end-end-radius",
-        "defenition": "Sets the radius of the corner between the block-end and the inline-end sides of the element"
+        "defenition": "Sets the radius of the corner between the block-end and the inline-end sides of the element",
+        "editors": [
+            {
+                "type": "unit",
+                "subType": "space"
+            }
+        ]
     },
     {
         "name": "border-end-start-radius",
-        "defenition": "Sets the radius of the corner between the block-end and the inline-start sides of the element"
+        "defenition": "Sets the radius of the corner between the block-end and the inline-start sides of the element",
+        "editors": [
+            {
+                "type": "unit",
+                "subType": "space"
+            }
+        ]
     },
     {
         "name": "border-image",
-        "defenition": "A shorthand property for all the border-image-* properties"
+        "defenition": "A shorthand property for all the border-image-* properties",
+        "editors": [
+            {
+                "type": "string",
+                "subType": "url"
+            },
+            {
+                "type": "tool",
+                "subType": "gradient"
+            }
+        ]
     },
     {
         "name": "border-image-outset",
-        "defenition": "Specifies the amount by which the border image area extends beyond the border box"
+        "defenition": "Specifies the amount by which the border image area extends beyond the border box",
+        "editors": [
+            {
+                "type": "unit",
+                "subType": "space"
+            }
+        ],
+        "max": 4
     },
     {
         "name": "border-image-repeat",
-        "defenition": "Specifies whether the border image should be repeated, rounded or stretched"
+        "defenition": "Specifies whether the border image should be repeated, rounded or stretched",
+        "editors": [
+            {
+                "type": "enum",
+                "subType": "background-repeat"
+            }
+        ]
     },
     {
         "name": "border-image-slice",
-        "defenition": "Specifies how to slice the border image"
+        "defenition": "Specifies how to slice the border image",
+        "editors": [
+            {
+                "type": "tool",
+                "subType": "slice"
+            }
+        ]
     },
     {
         "name": "border-image-source",
-        "defenition": "Specifies the path to the image to be used as a border"
+        "defenition": "Specifies the path to the image to be used as a border",
+        "editors": [
+            {
+                "type": "string",
+                "subType": "url"
+            },
+            {
+                "type": "tool",
+                "subType": "gradient"
+            }
+        ]
     },
     {
         "name": "border-image-width",
-        "defenition": "Specifies the width of the border image"
+        "defenition": "Specifies the width of the border image",
+        "editors": [
+            {
+                "type": "unit",
+                "subType": "space"
+            }
+        ]
     },
     {
         "name": "border-inline",
-        "defenition": "A shorthand property for border-inline-width, border-inline-style and border-inline-color"
+        "defenition": "A shorthand property for border-inline-width, border-inline-style and border-inline-color",
+        "editors": [
+            {
+                "type": "composite",
+                "subType": "border"
+            }
+        ]
     },
     {
         "name": "border-inline-color",
-        "defenition": "Sets the color of the borders at start and end in the inline direction"
+        "defenition": "Sets the color of the borders at start and end in the inline direction",
+        "editors": [
+            {
+                "type": "color",
+                "subType": ""
+            }
+        ]
     },
     {
         "name": "border-inline-end",
-        "defenition": "A shorthand property for border-inline-end-width, border-inline-end-style and border-inline-end-color"
+        "defenition": "A shorthand property for border-inline-end-width, border-inline-end-style and border-inline-end-color",
+        "editors": [
+            {
+                "type": "composite",
+                "subType": "border"
+            }
+        ]
     },
     {
         "name": "border-inline-end-color",
-        "defenition": "Sets the color of the border at the end in the inline direction"
+        "defenition": "Sets the color of the border at the end in the inline direction",
+        "editors": [
+            {
+                "type": "color",
+                "subType": ""
+            }
+        ]
     },
     {
         "name": "border-inline-end-style",
-        "defenition": "Sets the style of the border at the end in the inline direction"
+        "defenition": "Sets the style of the border at the end in the inline direction",
+        "editors": [
+            {
+                "type": "enum",
+                "subType": "border-style"
+            }
+        ]
     },
     {
         "name": "border-inline-end-width",
-        "defenition": "Sets the width of the border at the end in the inline direction"
+        "defenition": "Sets the width of the border at the end in the inline direction",
+        "editors": [
+            {
+                "type": "unit",
+                "subType": "space"
+            }
+        ]
     },
     {
         "name": "border-inline-start",
-        "defenition": "A shorthand property for border-inline-start-width, border-inline-start-style and border-inline-start-color"
+        "defenition": "A shorthand property for border-inline-start-width, border-inline-start-style and border-inline-start-color",
+        "editors": [
+            {
+                "type": "composite",
+                "subType": "border"
+            }
+        ]
     },
     {
         "name": "border-inline-start-color",
-        "defenition": "Sets the color of the border at the start in the inline direction"
+        "defenition": "Sets the color of the border at the start in the inline direction",
+        "editors": [
+            {
+                "type": "color",
+                "subType": ""
+            }
+        ]
     },
     {
         "name": "border-inline-start-style",
-        "defenition": "Sets the style of the border at the start in the inline direction"
+        "defenition": "Sets the style of the border at the start in the inline direction",
+        "editors": [
+            {
+                "type": "enum",
+                "subType": "border-style"
+            }
+        ]
     },
     {
         "name": "border-inline-start-width",
-        "defenition": "Sets the width of the border at the start in the inline direction"
+        "defenition": "Sets the width of the border at the start in the inline direction",
+        "editors": [
+            {
+                "type": "unit",
+                "subType": "space"
+            }
+        ]
     },
     {
         "name": "border-inline-style",
-        "defenition": "Sets the style of the borders at start and end in the inline direction"
+        "defenition": "Sets the style of the borders at start and end in the inline direction",
+        "editors": [
+            {
+                "type": "enum",
+                "subType": "border-style"
+            }
+        ]
     },
     {
         "name": "border-inline-width",
-        "defenition": "Sets the width of the borders at start and end in the inline direction"
+        "defenition": "Sets the width of the borders at start and end in the inline direction",
+        "editors": [
+            {
+                "type": "unit",
+                "subType": "space"
+            }
+        ]
     },
     {
         "name": "border-left",
-        "defenition": "A shorthand property for all the border-left-* properties"
+        "defenition": "A shorthand property for all the border-left-* properties",
+        "editors": [
+            {
+                "type": "composite",
+                "subType": "border"
+            }
+        ]
     },
     {
         "name": "border-left-color",
-        "defenition": "Sets the color of the left border"
+        "defenition": "Sets the color of the left border",
+        "editors": [
+            {
+                "type": "color",
+                "subType": ""
+            }
+        ]
     },
     {
         "name": "border-left-style",
-        "defenition": "Sets the style of the left border"
+        "defenition": "Sets the style of the left border",
+        "editors": [
+            {
+                "type": "enum",
+                "subType": "border-style"
+            }
+        ]
     },
     {
         "name": "border-left-width",
-        "defenition": "Sets the width of the left border"
+        "defenition": "Sets the width of the left border",
+        "editors": [
+            {
+                "type": "unit",
+                "subType": "space"
+            }
+        ]
     },
     {
         "name": "border-radius",
-        "defenition": "A shorthand property for the four border-*-radius properties"
+        "defenition": "A shorthand property for the four border-*-radius properties",
+        "editors": [
+            {
+                "type": "unit",
+                "subType": "space"
+            }
+        ],
+        "max": 4
     },
     {
         "name": "border-right",
-        "defenition": "A shorthand property for all the border-right-* properties"
+        "defenition": "A shorthand property for all the border-right-* properties",
+        "editors": [
+            {
+                "type": "composite",
+                "subType": "border"
+            }
+        ]
     },
     {
         "name": "border-right-color",
-        "defenition": "Sets the color of the right border"
+        "defenition": "Sets the color of the right border",
+        "editors": [
+            {
+                "type": "color",
+                "subType": ""
+            }
+        ]
     },
     {
         "name": "border-right-style",
-        "defenition": "Sets the style of the right border"
+        "defenition": "Sets the style of the right border",
+        "editors": [
+            {
+                "type": "enum",
+                "subType": "border-style"
+            }
+        ]
     },
     {
         "name": "border-right-width",
-        "defenition": "Sets the width of the right border"
+        "defenition": "Sets the width of the right border",
+        "editors": [
+            {
+                "type": "unit",
+                "subType": "space"
+            }
+        ]
     },
     {
         "name": "border-spacing",
-        "defenition": "Sets the distance between the borders of adjacent cells"
+        "defenition": "Sets the distance between the borders of adjacent cells",
+        "editors": [
+            {
+                "type": "unit",
+                "subType": "space"
+            }
+        ],
+        "max": 2
     },
     {
         "name": "border-start-end-radius",
-        "defenition": "Sets the radius of the corner between the block-start and the inline-end sides of the element"
+        "defenition": "Sets the radius of the corner between the block-start and the inline-end sides of the element",
+        "editors": [
+            {
+                "type": "unit",
+                "subType": "space"
+            }
+        ]
     },
     {
         "name": "border-start-start-radius",
-        "defenition": "Sets the radius of the corner between the block-start and the inline-start sides of the element"
+        "defenition": "Sets the radius of the corner between the block-start and the inline-start sides of the element",
+        "editors": [
+            {
+                "type": "unit",
+                "subType": "space"
+            }
+        ]
     },
     {
         "name": "border-style",
-        "defenition": "Sets the style of the four borders"
+        "defenition": "Sets the style of the four borders",
+        "editors": [
+            {
+                "type": "enum",
+                "subType": "border-style"
+            }
+        ]
     },
     {
         "name": "border-top",
-        "defenition": "A shorthand property for border-top-width, border-top-style and border-top-color"
+        "defenition": "A shorthand property for border-top-width, border-top-style and border-top-color",
+        "editors": [
+            {
+                "type": "composite",
+                "subType": "border"
+            }
+        ]
     },
     {
         "name": "border-top-color",
-        "defenition": "Sets the color of the top border"
+        "defenition": "Sets the color of the top border",
+        "editors": [
+            {
+                "type": "color",
+                "subType": ""
+            }
+        ]
     },
     {
         "name": "border-top-left-radius",
-        "defenition": "Defines the radius of the border of the top-left corner"
+        "defenition": "Defines the radius of the border of the top-left corner",
+        "editors": [
+            {
+                "type": "unit",
+                "subType": "space"
+            }
+        ]
     },
     {
         "name": "border-top-right-radius",
-        "defenition": "Defines the radius of the border of the top-right corner"
+        "defenition": "Defines the radius of the border of the top-right corner",
+        "editors": [
+            {
+                "type": "unit",
+                "subType": "space"
+            }
+        ]
     },
     {
         "name": "border-top-style",
-        "defenition": "Sets the style of the top border"
+        "defenition": "Sets the style of the top border",
+        "editors": [
+            {
+                "type": "enum",
+                "subType": "border-style"
+            }
+        ]
     },
     {
         "name": "border-top-width",
-        "defenition": "Sets the width of the top border"
+        "defenition": "Sets the width of the top border",
+        "editors": [
+            {
+                "type": "unit",
+                "subType": "space"
+            }
+        ]
     },
     {
         "name": "border-width",
-        "defenition": "Sets the width of the four borders"
+        "defenition": "Sets the width of the four borders",
+        "editors": [
+            {
+                "type": "unit",
+                "subType": "space"
+            }
+        ]
     },
     {
         "name": "bottom",
-        "defenition": "Sets the elements position, from the bottom of its parent element"
+        "defenition": "Sets the elements position, from the bottom of its parent element",
+        "editors": [
+            {
+                "type": "unit",
+                "subType": "space"
+            },
+            {
+                "type": "tool",
+                "subType": "anchor"
+            }
+        ]
     },
     {
         "name": "box-decoration-break",
-        "defenition": "Sets the behavior of the background and border of an element at page-break, or, for in-line elements, at line-break."
+        "defenition": "Sets the behavior of the background and border of an element at page-break, or, for in-line elements, at line-break.",
+        "editors": [
+            {
+                "type": "enum",
+                "subType": "box-decoration-break"
+            }
+        ]
     },
     {
         "name": "box-reflect",
-        "defenition": "The box-reflect property is used to create a reflection of an element."
+        "defenition": "The box-reflect property is used to create a reflection of an element.",
+        "editors": [
+            {
+                "type": "color",
+                "subType": ""
+            }
+        ]
     },
     {
         "name": "box-shadow",
-        "defenition": "Attaches one or more shadows to an element"
+        "defenition": "Attaches one or more shadows to an element",
+        "editors": [
+            {
+                "type": "shadow",
+                "subType": "box"
+            }
+        ]
     },
     {
         "name": "box-sizing",
-        "defenition": "Defines how the width and height of an element are calculated: should they include padding and borders, or not"
+        "defenition": "Defines how the width and height of an element are calculated: should they include padding and borders, or not",
+        "editors": [
+            {
+                "type": "enum",
+                "subType": "box-sizing"
+            }
+        ]
     },
     {
         "name": "break-after",
-        "defenition": "Specifies whether or not a page-, column-, or region-break should occur after the specified element"
+        "defenition": "Specifies whether or not a page-, column-, or region-break should occur after the specified element",
+        "editors": [
+            {
+                "type": "enum",
+                "subType": "break-before-after"
+            }
+        ]
     },
     {
         "name": "break-before",
-        "defenition": "Specifies whether or not a page-, column-, or region-break should occur before the specified element"
+        "defenition": "Specifies whether or not a page-, column-, or region-break should occur before the specified element",
+        "editors": [
+            {
+                "type": "enum",
+                "subType": "break-before-after"
+            }
+        ]
     },
     {
         "name": "break-inside",
-        "defenition": "Specifies whether or not a page-, column-, or region-break should occur inside the specified element"
+        "defenition": "Specifies whether or not a page-, column-, or region-break should occur inside the specified element",
+        "editors": [
+            {
+                "type": "enum",
+                "subType": "break-inside"
+            }
+        ]
     },
     {
         "name": "caption-side",
-        "defenition": "Specifies the placement of a table caption"
+        "defenition": "Specifies the placement of a table caption",
+        "editors": [
+            {
+                "type": "enum",
+                "subType": "caption-side"
+            }
+        ]
     },
     {
         "name": "caret-color",
-        "defenition": "Specifies the color of the cursor (caret) in inputs, textareas, or any element that is editable"
-    },
-    {
-        "name": "@charset",
-        "defenition": "Specifies the character encoding used in the style sheet"
+        "defenition": "Specifies the color of the cursor (caret) in inputs, textareas, or any element that is editable",
+        "editors": [
+            {
+                "type": "color",
+                "subType": ""
+            }
+        ]
     },
     {
         "name": "clear",
-        "defenition": "Specifies what should happen with the element that is next to a floating element"
-    },
-    {
-        "name": "clip",
-        "defenition": "Deprecated in favor of clip-path. Clips an absolutely positioned element"
+        "defenition": "Specifies what should happen with the element that is next to a floating element",
+        "editors": [
+            {
+                "type": "enum",
+                "subType": "clear"
+            }
+        ]
     },
     {
         "name": "clip-path",
-        "defenition": "Clips an element to a basic shape or to an SVG source"
+        "defenition": "Clips an element to a basic shape or to an SVG source",
+        "editors": [
+            {
+                "type": "tool",
+                "subType": "clip-path"
+            },
+            {
+                "type": "enum",
+                "subType": "clip-path"
+            }
+        ]
     },
     {
         "name": "color",
-        "defenition": "Sets the color of text"
+        "defenition": "Sets the color of text",
+        "editors": [
+            {
+                "type": "color",
+                "subType": ""
+            }
+        ]
     },
     {
         "name": "color-scheme",
-        "defenition": "Indicates which operating system color scheme an element should render with"
+        "defenition": "Indicates which operating system color scheme an element should render with",
+        "editors": [
+            {
+                "type": "enum",
+                "subType": "color-scheme"
+            }
+        ]
     },
     {
         "name": "column-count",
-        "defenition": "Specifies the number of columns an element should be divided into"
+        "defenition": "Specifies the number of columns an element should be divided into",
+        "editors": [
+            {
+                "type": "number",
+                "subType": ""
+            },
+            {
+                "type": "enum",
+                "subtype": "column-count"
+            }
+        ]
     },
     {
         "name": "column-fill",
-        "defenition": "Specifies how to fill columns, balanced or not"
+        "defenition": "Specifies how to fill columns, balanced or not",
+        "editors": [
+            {
+                "type": "enum",
+                "subType": "column-fill"
+            }
+        ]
     },
     {
         "name": "column-gap",
-        "defenition": "Specifies the gap between the columns"
+        "defenition": "Specifies the gap between the columns",
+        "editors": [
+            {
+                "type": "unit",
+                "subType": "space"
+            }
+        ]
     },
     {
         "name": "column-rule",
-        "defenition": "A shorthand property for all the column-rule-* properties"
+        "defenition": "A shorthand property for all the column-rule-* properties",
+        "editors": [
+            {
+                "type": "composite",
+                "subType": "border"
+            }
+        ]
     },
     {
         "name": "column-rule-color",
-        "defenition": "Specifies the color of the rule between columns"
+        "defenition": "Specifies the color of the rule between columns",
+        "editors": [
+            {
+                "type": "color",
+                "subType": ""
+            }
+        ]
     },
     {
         "name": "column-rule-style",
-        "defenition": "Specifies the style of the rule between columns"
+        "defenition": "Specifies the style of the rule between columns",
+        "editors": [
+            {
+                "type": "enum",
+                "subType": "border-style"
+            }
+        ]
     },
     {
         "name": "column-rule-width",
-        "defenition": "Specifies the width of the rule between columns"
+        "defenition": "Specifies the width of the rule between columns",
+        "editors": [
+            {
+                "type": "unit",
+                "subType": "space"
+            }
+        ]
     },
     {
         "name": "column-span",
-        "defenition": "Specifies how many columns an element should span across"
+        "defenition": "Specifies how many columns an element should span across",
+        "editors": [
+            {
+                "type": "enum",
+                "subType": "column-span"
+            }
+        ]
     },
     {
         "name": "column-width",
-        "defenition": "Specifies the column width"
+        "defenition": "Specifies the column width",
+        "editors": [
+            {
+                "type": "unit",
+                "subType": "space"
+            }
+        ]
     },
     {
         "name": "columns",
-        "defenition": "A shorthand property for column-width and column-count"
+        "defenition": "A shorthand property for column-width and column-count",
+        "editors": [
+            {
+                "type": "unit",
+                "subType": "space"
+            },
+            {
+                "type": "number",
+                "subType": ""
+            }
+        ]
     },
     {
         "name": "content",
-        "defenition": "Used with the :before and :after pseudo-elements, to insert generated content"
+        "defenition": "Used with the :before and :after pseudo-elements, to insert generated content",
+        "editors": [
+            {
+                "type": "tool",
+                "subType": "content"
+            }
+        ]
     },
     {
         "name": "counter-increment",
-        "defenition": "Increases or decreases the value of one or more CSS counters"
+        "defenition": "Increases or decreases the value of one or more CSS counters",
+        "editors": [
+            {
+                "type": "tool",
+                "subType": "counter-increment"
+            }
+        ]
     },
     {
         "name": "counter-reset",
-        "defenition": "Creates or resets one or more CSS counters"
+        "defenition": "Creates or resets one or more CSS counters",
+        "editors": [
+            {
+                "type": "tool",
+                "subType": "counter-set"
+            }
+        ]
     },
     {
         "name": "counter-set",
-        "defenition": "Creates or sets one or more CSS counters"
+        "defenition": "Creates or sets one or more CSS counters",
+        "editors": [
+            {
+                "type": "tool",
+                "subType": "counter-set"
+            }
+        ]
     },
     {
         "name": "cursor",
-        "defenition": "Specifies the mouse cursor to be displayed when pointing over an element"
+        "defenition": "Specifies the mouse cursor to be displayed when pointing over an element",
+        "editors": [
+            {
+                "type": "enum",
+                "subType": "cursor"
+            }
+        ]
     },
     {
         "name": "direction",
-        "defenition": "Specifies the text direction/writing direction"
+        "defenition": "Specifies the text direction/writing direction",
+        "editors": [
+            {
+                "type": "enum",
+                "subType": "direction"
+            }
+        ]
     },
     {
         "name": "display",
-        "defenition": "Specifies how a certain HTML element should be displayed"
+        "defenition": "Specifies how a certain HTML element should be displayed",
+        "editors": [
+            {
+                "type": "enum",
+                "subType": "display"
+            }
+        ]
     },
     {
         "name": "empty-cells",
-        "defenition": "Specifies whether or not to display borders and background on empty cells in a table"
+        "defenition": "Specifies whether or not to display borders and background on empty cells in a table",
+        "editors": [
+            {
+                "type": "enum",
+                "subType": "empty-cells"
+            }
+        ]
     },
     {
         "name": "filter",
-        "defenition": "Defines effects (e.g. blurring or color shifting) on an element before the element is displayed"
+        "defenition": "Defines effects (e.g. blurring or color shifting) on an element before the element is displayed",
+        "editors": [
+            {
+                "type": "tool",
+                "subType": "filter"
+            }
+        ]
     },
     {
         "name": "flex",
-        "defenition": "A shorthand property for the flex-grow, flex-shrink, and the flex-basis properties"
+        "defenition": "A shorthand property for the flex-grow, flex-shrink, and the flex-basis properties",
+        "editors": {
+            "type": "composite",
+            "subType": "flex"
+        }
     },
     {
         "name": "flex-basis",
-        "defenition": "Specifies the initial length of a flexible item"
+        "defenition": "Specifies the initial length of a flexible item",
+        "editors": [
+            {
+                "type": "unit",
+                "subType": "space"
+            },
+            {
+                "type": "enum",
+                "subType": "flex-basis"
+            }
+        ]
     },
     {
         "name": "flex-direction",
-        "defenition": "Specifies the direction of the flexible items"
+        "defenition": "Specifies the direction of the flexible items",
+        "editors": [
+            {
+                "type": "enum",
+                "subType": "flex-directions"
+            }
+        ]
     },
     {
         "name": "flex-flow",
-        "defenition": "A shorthand property for the flex-direction and the flex-wrap properties"
+        "defenition": "A shorthand property for the flex-direction and the flex-wrap properties",
+        "editors": {
+            "type": "composite",
+            "subType": "flex-flow"
+        }
     },
     {
         "name": "flex-grow",
-        "defenition": "Specifies how much the item will grow relative to the rest"
+        "defenition": "Specifies how much the item will grow relative to the rest",
+        "editors": [
+            {
+                "type": "number",
+                "subType": ""
+            }
+        ]
     },
     {
         "name": "flex-shrink",
-        "defenition": "Specifies how the item will shrink relative to the rest"
+        "defenition": "Specifies how the item will shrink relative to the rest",
+        "editors": [
+            {
+                "type": "number",
+                "subType": ""
+            }
+        ]
     },
     {
         "name": "flex-wrap",
-        "defenition": "Specifies whether the flexible items should wrap or not"
+        "defenition": "Specifies whether the flexible items should wrap or not",
+        "editors": [
+            {
+                "type": "enum",
+                "subType": "flex-wrap"
+            }
+        ]
     },
     {
         "name": "float",
-        "defenition": "Specifies whether an element should float to the left, right, or not at all"
+        "defenition": "Specifies whether an element should float to the left, right, or not at all",
+        "editors": [
+            {
+                "type": "enum",
+                "subType": "float"
+            }
+        ]
     },
     {
         "name": "font",
-        "defenition": "A shorthand property for the font-style, font-variant, font-weight, font-size/line-height, and the font-family properties"
-    },
-    {
-        "name": "@font-face",
-        "defenition": "A rule that allows websites to download and use fonts other than the \"web-safe\" fonts"
+        "defenition": "A shorthand property for the font-style, font-variant, font-weight, font-size/line-height, and the font-family properties",
+        "editors": {
+            "type": "composite",
+            "subType": "font"
+        }
     },
     {
         "name": "font-family",
-        "defenition": "Specifies the font family for text"
+        "defenition": "Specifies the font family for text",
+        "editors": [
+            {
+                "type": "string",
+                "subType": ""
+            },
+            {
+                "type": "enum",
+                "subType": "font-family"
+            }
+        ]
     },
     {
         "name": "font-feature-settings",
-        "defenition": "Allows control over advanced typographic features in OpenType fonts"
-    },
-    {
-        "name": "@font-feature-values",
-        "defenition": "Allows authors to use a common name in font-variant-alternate for feature activated differently in OpenType"
+        "defenition": "Allows control over advanced typographic features in OpenType fonts",
+        "editors": [
+            {
+                "type": "tool",
+                "subType": "font-feature-settings"
+            }
+        ]
     },
     {
         "name": "font-kerning",
-        "defenition": "Controls the usage of the kerning information (how letters are spaced)"
+        "defenition": "Controls the usage of the kerning information (how letters are spaced)",
+        "editors": [
+            {
+                "type": "enum",
+                "subType": "font-kerning"
+            }
+        ]
     },
     {
         "name": "font-language-override",
-        "defenition": "Controls the usage of language-specific glyphs in a typeface"
+        "defenition": "Controls the usage of language-specific glyphs in a typeface",
+        "editors": [
+            {
+                "type": "string",
+                "subType": ""
+            },
+            {
+                "type": "enum",
+                "subType": "font-language-override"
+            }
+        ]
     },
     {
         "name": "font-size",
-        "defenition": "Specifies the font size of text"
+        "defenition": "Specifies the font size of text",
+        "editors": [
+            {
+                "type": "unit",
+                "subType": "space"
+            },
+            {
+                "type": "enum",
+                "subType": "font-size"
+            }
+        ]
     },
     {
         "name": "font-size-adjust",
-        "defenition": "Preserves the readability of text when font fallback occurs"
+        "defenition": "Preserves the readability of text when font fallback occurs",
+        "editors": [
+            {
+                "type": "tool",
+                "subType": "font-size-adjust"
+            }
+        ]
     },
     {
         "name": "font-stretch",
-        "defenition": "Selects a normal, condensed, or expanded face from a font family"
+        "defenition": "Selects a normal, condensed, or expanded face from a font family",
+        "editors": [
+            {
+                "type": "unit",
+                "subType": "percent"
+            },
+            {
+                "type": "enum",
+                "subType": "font-stretch"
+            }
+        ]
     },
     {
         "name": "font-style",
-        "defenition": "Specifies the font style for text"
+        "defenition": "Specifies the font style for text",
+        "editors": [
+            {
+                "type": "tool",
+                "subType": "oblique"
+            },
+            {
+                "type": "enum",
+                "subType": "font-style"
+            }
+        ]
     },
     {
         "name": "font-synthesis",
-        "defenition": "Controls which missing typefaces (bold or italic) may be synthesized by the browser"
+        "defenition": "Controls which missing typefaces (bold or italic) may be synthesized by the browser",
+        "editors": [
+            {
+                "type": "tool",
+                "subType": "font-synthesis"
+            }
+        ]
     },
     {
         "name": "font-variant",
-        "defenition": "Specifies whether or not a text should be displayed in a small-caps font"
+        "defenition": "Specifies whether or not a text should be displayed in a small-caps font",
+        "editors": [
+            {
+                "type": "composite",
+                "subType": "font-variant"
+            }
+        ]
     },
     {
         "name": "font-variant-alternates",
-        "defenition": "Controls the usage of alternate glyphs associated to alternative names defined in @font-feature-values"
+        "defenition": "Controls the usage of alternate glyphs associated to alternative names defined in @font-feature-values",
+        "editors": [
+            {
+                "type": "tool",
+                "subType": "font-variant-alternates"
+            },
+            {
+                "type": "enum",
+                "subType": "font-variant-alternates"
+            }
+        ]
     },
     {
         "name": "font-variant-caps",
-        "defenition": "Controls the usage of alternate glyphs for capital letters"
+        "defenition": "Controls the usage of alternate glyphs for capital letters",
+        "editors": [
+            {
+                "type": "enum",
+                "subType": "font-variant-caps"
+            }
+        ]
     },
     {
         "name": "font-variant-east-asian",
-        "defenition": "Controls the usage of alternate glyphs for East Asian scripts (e.g Japanese and Chinese)"
+        "defenition": "Controls the usage of alternate glyphs for East Asian scripts (e.g Japanese and Chinese)",
+        "editors": [
+            {
+                "type": "enum",
+                "subType": "font-variant-east-asian"
+            }
+        ],
+        "max": 3
     },
     {
         "name": "font-variant-ligatures",
-        "defenition": "Controls which ligatures and contextual forms are used in textual content of the elements it applies to"
+        "defenition": "Controls which ligatures and contextual forms are used in textual content of the elements it applies to",
+        "editors": [
+            {
+                "type": "enum",
+                "subType": "font-variant-ligatures"
+            }
+        ]
     },
     {
         "name": "font-variant-numeric",
-        "defenition": "Controls the usage of alternate glyphs for numbers, fractions, and ordinal markers"
+        "defenition": "Controls the usage of alternate glyphs for numbers, fractions, and ordinal markers",
+        "editors": [
+            {
+                "type": "enum",
+                "subType": "font-variant-numeric"
+            }
+        ]
     },
     {
         "name": "font-variant-position",
-        "defenition": "Controls the usage of alternate glyphs of smaller size positioned as superscript or subscript regarding the baseline of the font"
+        "defenition": "Controls the usage of alternate glyphs of smaller size positioned as superscript or subscript regarding the baseline of the font",
+        "editors": [
+            {
+                "type": "enum",
+                "subType": "font-variant-position"
+            }
+        ]
     },
     {
         "name": "font-weight",
-        "defenition": "Specifies the weight of a font"
+        "defenition": "Specifies the weight of a font",
+        "editors": [
+            {
+                "type": "number",
+                "subType": ""
+            },
+            {
+                "type": "enum",
+                "subType": "font-weight"
+            }
+        ]
     },
     {
         "name": "gap",
-        "defenition": "A shorthand property for the row-gap and the column-gap properties"
+        "defenition": "A shorthand property for the row-gap and the column-gap properties",
+        "editors": [
+            {
+                "type": "unit",
+                "subType": "space"
+            }
+        ],
+        "max": 2
     },
     {
         "name": "grid",
@@ -697,7 +1682,13 @@
     },
     {
         "name": "height",
-        "defenition": "Sets the height of an element"
+        "defenition": "Sets the height of an element",
+        "editors": [
+            {
+                "type": "unit",
+                "subType": "space"
+            }
+        ]
     },
     {
         "name": "hyphens",
@@ -1109,7 +2100,13 @@
     },
     {
         "name": "position",
-        "defenition": "Specifies the type of positioning method used for an element (static, relative, absolute or fixed)"
+        "defenition": "Specifies the type of positioning method used for an element (static, relative, absolute or fixed)",
+        "editors": [
+            {
+                "type": "enum",
+                "subType": "position"
+            }
+        ]
     },
     {
         "name": "quotes",
@@ -1397,7 +2394,13 @@
     },
     {
         "name": "width",
-        "defenition": "Sets the width of an element"
+        "defenition": "Sets the width of an element",
+        "editors": [
+            {
+                "type": "unit",
+                "subType": "space"
+            }
+        ]
     },
     {
         "name": "word-break",

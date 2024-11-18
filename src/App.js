@@ -2,7 +2,7 @@ import logo from './logo.svg';
 import './App.css';
 import SelectorBuilder from './components/SelectorBuilder/SelectorBuilder';
 import Template from './components/Template/Template';
-import PropertySelector from './components/PropertySelector/PropertySelector';
+import PropertyManager from './components/PropertyManager/PropertyManager';
 import { useState } from 'react';
 
 function App() {
@@ -33,7 +33,7 @@ function App() {
       </header>
       <Template />
       <SelectorBuilder ready={ready} baseSelector={'.template-content'} defaultNode={defaultNode} />
-      <PropertySelector />
+      <PropertyManager />
     </div>
   );
 }
