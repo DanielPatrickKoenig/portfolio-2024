@@ -6,6 +6,7 @@ import PropertyManager from './components/PropertyManager/PropertyManager';
 import { useState } from 'react';
 
 function App() {
+  const topSelectorClass = 'template-content';
   const [ready, setReady] = useState(false);
 
   if (!ready) setTimeout(() => setReady(true), 1000);
@@ -31,9 +32,9 @@ function App() {
         </a>
         
       </header>
-      <Template />
-      <SelectorBuilder ready={ready} baseSelector={'.template-content'} defaultNode={defaultNode} />
-      <PropertyManager />
+      <Template templateClass={topSelectorClass} />
+      <SelectorBuilder ready={ready} baseSelector={`.${topSelectorClass}`} defaultNode={defaultNode} />
+      <PropertyManager templateClass={topSelectorClass} currentSelector={' '} />
     </div>
   );
 }

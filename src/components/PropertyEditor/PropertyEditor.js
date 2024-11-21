@@ -2,9 +2,8 @@
 import { Fragment } from 'react';
 import { UnitEditor, ColorEditor, EnumEditor } from '../Editors';
 const PropertyEditor = (props) => {
-
     const valueUpdateHandler = (name, value) => {
-        console.log(name, value);
+        props.onPropertyUpdated(name, value);
     }
     return (
         <div>
