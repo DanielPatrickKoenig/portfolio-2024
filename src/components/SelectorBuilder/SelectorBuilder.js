@@ -15,10 +15,21 @@ const SelectorBuilder = (props) => {
     const createBuildMatrix = (entry) => {
         return buildMatrix(entry.selector === '', props.baseSelector, entry, selectorData);
     }
+
+    const updateSelector = (value) => {
+        setSelectorValue(value);
+        props.onSelectorUpdated(serianizeSelector(value));
+    }
+
+    const serianizeSelector = (value) => {
+        const lastChar = value.split('').find((item, index) => index === value.length - 1);
+        const modifiedValue = `${value}${lastChar === ')' ? '*' : ''}`;
+        return modifiedValue.split('(').join(' ').split(')').join(' ');
+    }
     
     const processSelection = (data) => {
         console.log(data);
-        setSelectorValue(`${selectorValue}${data.value}`);
+        updateSelector(`${selectorValue}${data.value}`);
         const newEntry = {
             followables: data.followables,
             selector: `${selectorValue}${data.value}`.split('(').join(' ').split(')').join(' '),
@@ -35,10 +46,10 @@ const SelectorBuilder = (props) => {
         newNodeDat.splice(nodeData.length - 1, 1);
         setNodeData(newNodeDat);
         if (newNodeDat.length) {
-            setSelectorValue(newNodeDat[newNodeDat.length - 1].selector);
+            updateSelector(newNodeDat[newNodeDat.length - 1].selector);
         }
         else {
-            setSelectorValue('');
+            updateSelector('');
         }
         
 
@@ -67,7 +78,7 @@ const SelectorBuilder = (props) => {
                 {renderBuilderNode(props.defaultNode, -1)}
                 { nodeData.map((item, i) => renderBuilderNode(item, i)) }
                 
-                {selectorValue.split('(').join(' ').split(')').join(' ')}
+                {serianizeSelector(selectorValue)}
             </div>}
         </div>
     );
