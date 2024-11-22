@@ -1,8 +1,7 @@
 import { useState } from "react"
 
-import templates from '../../assets/editableTemplates.json';
-const Template = () => {
-    const [templateContent, setTemplateContent] = useState(templates[1].content);
+const Template = (props) => {
+    const [templateContent, setTemplateContent] = useState(props.templates[props.templateIndex >= 0 ? props.templateIndex : 2].content);
 
     const changeContent = (e) => {
         setTemplateContent(e.target.value);
