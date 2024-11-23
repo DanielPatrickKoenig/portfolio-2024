@@ -1,4 +1,4 @@
-import { Fragment, useState } from "react";
+import { Fragment, useEffect, useState } from "react";
 import PropertySelector from "../PropertySelector/PropertySelector";
 import PropertyEditor from "../PropertyEditor/PropertyEditor";
 import StyleRenderer from "../StyleRenderer/StyleRenderer";
@@ -10,12 +10,20 @@ const PropertyManager = (props) => {
         setPropertyList(selectedProperties);
         setEditing(true);
     };
-    const propertyEditedHandler = (name, value) => {
-        const tempStyleObject = { ...styleObject };
-        if (!tempStyleObject[`.${props.templateClass} ${props.currentSelector}`]) {
-            tempStyleObject[`.${props.templateClass} ${props.currentSelector}`] = {};
+    const addTempSelector = (selector, prefix = '') => {
+        const tempObject = { ...styleObject };
+        if (!tempObject[`${prefix}${selector}`]) {
+            tempObject[`${prefix}${selector}`] = {};
         }
-        tempStyleObject[`.${props.templateClass} ${props.currentSelector}`][name] = value;
+        return tempObject;
+    }
+    const propertyEditedHandler = (name, value, selector) => {
+        const tempStyleObject = addTempSelector(selector);
+        // const tempStyleObject = { ...styleObject };
+        // if (!tempStyleObject[`.${props.templateClass} ${selector ? selector : props.currentSelector}`]) {
+        //     tempStyleObject[`.${props.templateClass} ${selector ? selector : props.currentSelector}`] = {};
+        // }
+        tempStyleObject[`${selector}`][name] = value;
         setStyleObject(tempStyleObject);
     }
     const processStyleObject = () => {
@@ -29,15 +37,28 @@ const PropertyManager = (props) => {
         });
         return `<style>${styleString}</style>`;
     }
+    useEffect (() => {
+        const tempStyleObject = addTempSelector(props.currentSelector, `.${props.templateClass} `);
+        setStyleObject(tempStyleObject);
+    }, [props.currentSelector]);
     return (
         <div>
             {editing && (
                 <Fragment>
-                    <PropertyEditor 
-                        selectedProperties={propertyList}
-                        onReturnToSelector={() => setEditing(false)}
-                        onPropertyUpdated={propertyEditedHandler}
-                    />
+                    {Object.keys(styleObject).map(item => (
+                        <div 
+                            key={item}
+                            style={{display: item === `.${props.templateClass} ${props.currentSelector}` ? 'block' : 'none'}}
+                        >
+                            <p>Selector: {item}</p>
+                            <PropertyEditor 
+                                selectedProperties={propertyList}
+                                selector={item}
+                                onReturnToSelector={() => setEditing(false)}
+                                onPropertyUpdated={propertyEditedHandler}
+                            />
+                        </div>
+                    ))}
                     <StyleRenderer cssString={processStyleObject()} />
                     {processStyleObject()}
                 </Fragment>

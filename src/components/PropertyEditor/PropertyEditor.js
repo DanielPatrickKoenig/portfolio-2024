@@ -2,7 +2,7 @@
 import EditorShell from '../EditorShell/EditorShell';
 const PropertyEditor = (props) => {
     const valueUpdateHandler = (name, value) => {
-        props.onPropertyUpdated(name, value);
+        props.onPropertyUpdated(name, value, props.selector);
     }
     return (
         <div>
