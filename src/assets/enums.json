@@ -538,6 +538,350 @@
         ]
     },
     {
+        "name": "grid-auto-flow",
+        "values": [
+            "row",
+            "column",
+            "dense",
+            "row dense",
+            "column dense"
+        ]
+    },
+    {
+        "name": "column-row-gap",
+        "values": [
+            "normal"
+        ]
+    },
+    {
+        "name": "hanging-punctuation",
+        "values": [
+            "none",
+            "first",
+            "last",
+            "allow-end"
+        ]
+    },
+    {
+        "name": "hyphens",
+        "values": [
+            "none",
+            "manual",
+            "auto"
+        ]
+    },
+    {
+        "name": "image-rendering",
+        "values": [
+            "auto",
+            "crisp-edges",
+            "pixelated"
+        ]
+    },
+    {
+        "name": "inline-size",
+        "values": [
+            "max-content",
+            "min-content",
+            "fit-content",
+            "auto"
+        ]
+    },
+    {
+        "name": "inset",
+        "values": [
+            "auto"
+        ]
+    },
+    {
+        "name": "isolation",
+        "values": [
+            "auto",
+            "isolate"
+        ]
+    },
+    {
+        "name": "letter-spacing",
+        "values": [
+            "normal"
+        ]
+    },
+    {
+        "name": "line-break",
+        "values": [
+            "auto",
+            "loose",
+            "normal",
+            "strict",
+            "anywhere"
+        ]
+    },
+    {
+        "name": "line-height",
+        "values": [
+            "normal"
+        ]
+    },
+    {
+        "name": "list-style-position",
+        "values": [
+            "inside",
+            "outside"
+        ]
+    },
+    {
+        "name": "list-style-type",
+        "values": [
+            "disc",
+            "circle",
+            "square",
+            "decimal",
+            "georgian",
+            "trad-chinese-informal",
+            "kannada",
+            "custom-counter-style",
+            "armenian",
+            "cjk-ideographic",
+            "decimal-leading-zero",
+            "hebrew",
+            "hiragana",
+            "hiragana-iroha",
+            "katakana",
+            "katakana-iroha",
+            "lower-alpha",
+            "lower-greek",
+            "lower-latin",
+            "lower-roman",
+            "upper-alpha",
+            "upper-greek",
+            "upper-latin",
+            "none"
+        ]
+    },
+    {
+        "name": "margin",
+        "values": [
+            "auto"
+        ]
+    },
+    {
+        "name": "mask-clip",
+        "values": [
+            "content-box",
+            "padding-box",
+            "border-box",
+            "fill-box",
+            "stroke-box",
+            "view-box",
+            "no-clip",
+            "border",
+            "padding",
+            "content",
+            "text"
+        ]
+    },
+    {
+        "name": "mask-composite",
+        "values": [
+            "add",
+            "subtract",
+            "intersect",
+            "exclude"
+        ]
+    },
+    {
+        "name": "mask-mode",
+        "values": [
+            "alpha",
+            "luminance",
+            "match-source"
+        ]
+    },
+    {
+        "name": "mask-type",
+        "values": [
+            "luminance",
+            "alpha"
+        ]
+    },
+    {
+        "name": "size",
+        "values": [
+            "none",
+            "max-content",
+            "min-content",
+            "fit-content",
+            "stretch"
+        ]
+    },
+    {
+        "name": "mix-blend-mode",
+        "values": [
+            "normal",
+            "multiply",
+            "screen",
+            "overlay",
+            "darken",
+            "lighten",
+            "color-dodge",
+            "color-burn",
+            "hard-light",
+            "soft-light",
+            "difference",
+            "exclusion",
+            "hue",
+            "saturation",
+            "color",
+            "luminosity",
+            "plus-darker",
+            "plus-lighter"
+        ]
+    },
+    {
+        "name": "object-position",
+        "values": [
+            "top",
+            "bottom",
+            "left",
+            "right",
+            "center"
+        ]
+    },
+    {
+        "name": "object-fit",
+        "values": [
+            "contain",
+            "cover",
+            "fill",
+            "none",
+            "scale-down"
+        ]
+    },
+    {
+        "name": "offset-anchor",
+        "values": [
+            "top",
+            "bottom",
+            "left",
+            "right",
+            "center",
+            "auto"
+        ]
+    },
+    {
+        "name": "outline-width",
+        "values": [
+            "thin",
+            "medium",
+            "thick"
+        ]
+    },
+    {
+        "name": "overflow",
+        "values": [
+            "visible",
+            "hidden",
+            "clip",
+            "scroll",
+            "auto"
+        ]
+    },
+    {
+        "name": "overflow-anchor",
+        "values": [
+            "auto",
+            "none"
+        ]
+    },
+    {
+        "name": "overflow-wrap",
+        "values": [
+            "normal",
+            "break-word",
+            "anywhere"
+        ]
+    },
+    {
+        "name": "overscroll-behavior",
+        "values": [
+            "auto",
+            "contain",
+            "none"
+        ]
+    },
+    {
+        "name": "page-break",
+        "values": [
+            "auto",
+            "always",
+            "avoid",
+            "left",
+            "right",
+            "recto",
+            "verso"
+        ]
+    },
+    {
+        "name": "overscroll-behavior",
+        "values": [
+            "mormal",
+            "stroke",
+            "fill",
+            "markers"
+        ]
+    },
+    {
+        "name": "perspective",
+        "values": [
+            "none"
+        ]
+    },
+    {
+        "name": "perspective-origin",
+        "values": [
+            "bottom",
+            "center",
+            "left",
+            "right",
+            "top",
+            "x-position",
+            "y-position"
+        ]
+    },
+    {
+        "name": "place-content",
+        "values": [
+            "baseline",
+            "center",
+            "end",
+            "flex-end",
+            "flex-start",
+            "normal",
+            "spece-around",
+            "space-between",
+            "space-evenly",
+            "start",
+            "strict",
+            "legacy"
+        ]
+    },
+    {
+        "name": "pointer-events",
+        "values": [
+            "auto",
+            "none",
+            "visiblePainted",
+            "visibleFill",
+            "visibleStroke",
+            "visible",
+            "painted",
+            "fill",
+            "stroke",
+            "bounding-box",
+            "all"
+        ]
+    },
+    {
         "name": "position",
         "values": [
             "static",
@@ -545,6 +889,293 @@
             "absolute",
             "fixed",
             "sticky"
+        ]
+    },
+    {
+        "name": "quotes",
+        "values": [
+            "none"
+        ]
+    },
+    {
+        "name": "resize",
+        "values": [
+            "none",
+            "both",
+            "horizontal",
+            "vertical",
+            "block",
+            "inline"
+        ]
+    },
+    {
+        "name": "scroll-behavior",
+        "values": [
+            "auto",
+            "smooth"
+        ]
+    },
+    {
+        "name": "scroll-snap-stop",
+        "values": [
+            "normal",
+            "always"
+        ]
+    },
+    {
+        "name": "scroll-snap-align",
+        "values": [
+            "none",
+            "center",
+            "start",
+            "end"
+        ]
+    },
+    {
+        "name": "scroll-snap-type",
+        "values": [
+            "none",
+            "x",
+            "y",
+            "block",
+            "inline",
+            "both"
+        ]
+    },
+    {
+        "name": "table-layout",
+        "values": [
+            "auto",
+            "fixed"
+        ]
+    },
+    {
+        "name": "text-align",
+        "values": [
+            "start",
+            "end",
+            "left",
+            "right",
+            "center",
+            "justify",
+            "match-parent",
+            "-moz-center",
+            "-webkit-center"
+        ]
+    },
+    {
+        "name": "text-align-last",
+        "values": [
+            "auto",
+            "start",
+            "end",
+            "left",
+            "right",
+            "center",
+            "justify"
+        ]
+    },
+    {
+        "name": "text-combine-upright",
+        "values": [
+            "all",
+            "none"
+        ]
+    },
+    {
+        "name": "text-decoration",
+        "values": [
+            "underline",
+            "overline",
+            "none"
+        ]
+    },
+    {
+        "name": "text-decoration-line",
+        "values": [
+            "none",
+            "underline",
+            "overline",
+            "line-through",
+            "blink"
+        ]
+    },
+    {
+        "name": "text-emphasis",
+        "values": [
+            "filled",
+            "open",
+            "filled sesame",
+            "open sesame"
+        ]
+    },
+    {
+        "name": "text-emphasis-position",
+        "values": [
+            "auto",
+            "over",
+            "under",
+            "over",
+            "left",
+            "right",
+            "under"
+        ]
+    },
+    {
+        "name": "text-emphasis-style",
+        "values": [
+            "filled",
+            "open",
+            "dot",
+            "circle",
+            "double-circle",
+            "triangle",
+            "filled sesame",
+            "open sesame"
+        ]
+    },
+    {
+        "name": "text-justify",
+        "values": [
+            "auto",
+            "inter-word",
+            "inter-character",
+            "distribute"
+        ]
+    },
+    {
+        "name": "text-orientation",
+        "values": [
+            "mixed",
+            "upright",
+            "sideways-right",
+            "sideways",
+            "use-glyph-orientation"
+        ]
+    },
+    {
+        "name": "text-overflow",
+        "values": [
+            "clip",
+            "ellipsis"
+        ]
+    },
+    {
+        "name": "text-transform",
+        "values": [
+            "none",
+            "capitalize",
+            "uppercase",
+            "lowercase",
+            "full-width",
+            "full-size-kana",
+            "math-auto"
+        ]
+    },
+    {
+        "name": "text-underline-position",
+        "values": [
+            "auto",
+            "under",
+            "left",
+            "right"
+        ]
+    },
+    {
+        "name": "transform-origin",
+        "values": [
+            "bottom",
+            "center",
+            "left",
+            "right",
+            "top"
+        ]
+    },
+    {
+        "name": "transform-style",
+        "values": [
+            "flat",
+            "preserve-3d"
+        ]
+    },
+    {
+        "name": "unicode-bidi",
+        "values": [
+            "normal",
+            "embed",
+            "isolate",
+            "bidi-override",
+            "isolate-override",
+            "plaintext"
+        ]
+    },
+    {
+        "name": "user-select",
+        "values": [
+            "none",
+            "auto",
+            "text",
+            "all"
+        ]
+    },
+    {
+        "name": "vertical-align",
+        "values": [
+            "baseline",
+            "sub",
+            "super",
+            "text-top",
+            "text-bottom",
+            "middle",
+            "top",
+            "bottom"
+        ]
+    },
+    {
+        "name": "visibility",
+        "values": [
+            "visible",
+            "hidden",
+            "collapse"
+        ]
+    },
+    {
+        "name": "white-space",
+        "values": [
+            "normal",
+            "nowrap",
+            "pre",
+            "pre-wrap",
+            "pre-line",
+            "break-spaces",
+            "collapse balance",
+            "preserve nowrap"
+        ]
+    },
+    {
+        "name": "word-break",
+        "values": [
+            "normal",
+            "break-all",
+            "keep-all",
+            "auto-phrase",
+            "break-word"
+        ]
+    },
+    {
+        "name": "overflow-wrap",
+        "values": [
+            "ormal",
+            "break-word",
+            "anywhere"
+        ]
+    },
+    {
+        "name": "writing-mode",
+        "values": [
+            "horizontal-tb",
+            "vertical-rl",
+            "vertical-lr"
         ]
     }
 ]

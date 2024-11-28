@@ -25,5 +25,19 @@
             "s",
             "ms"
         ]
+    },
+    {
+        "name": "percent",
+        "units": [
+            "%"
+        ]
+    },
+    {
+        "name": "angle",
+        "units": [
+            "deg",
+            "turn",
+            "rad"
+        ]
     }
 ]
