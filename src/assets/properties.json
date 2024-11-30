@@ -113,8 +113,8 @@
         "defenition": "Specifies a name for the @keyframes animation",
         "editors": [
             {
-                "type": "keyframe",
-                "subType": ""
+                "type": "tool",
+                "subType": "keyframe"
             }
         ]
     },
@@ -999,8 +999,8 @@
         "defenition": "Attaches one or more shadows to an element",
         "editors": [
             {
-                "type": "shadow",
-                "subType": "box"
+                "type": "tool",
+                "subType": "shadow"
             }
         ]
     },
@@ -1118,7 +1118,7 @@
             },
             {
                 "type": "enum",
-                "subtype": "column-count"
+                "subType": "column-count"
             }
         ]
     },
@@ -3101,7 +3101,7 @@
         "defenition": "Specifies whether to smoothly animate the scroll position in a scrollable box, instead of a straight jump",
         "editors": [
             {
-                "type": "unit",
+                "type": "enum",
                 "subType": "scroll-behavior"
             }
         ]
@@ -3584,8 +3584,8 @@
         "defenition": "Adds shadow to text",
         "editors": [
             {
-                "type": "shadow",
-                "subType": "text"
+                "type": "tool",
+                "subType": "shadow"
             }
         ]
     },
