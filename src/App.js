@@ -7,6 +7,8 @@ import templates from './assets/editableTemplates.json'
 import { useState } from 'react';
 import { getParameterByName } from './utils/General';
 
+import { PropertyItemizer } from './components/PropertySelector/PropertyItemizer';
+
 const presets = getParameterByName('presets');
 
 function App() {
@@ -14,7 +16,8 @@ function App() {
   const topSelectorClass = 'template-content';
   const [ready, setReady] = useState(false);
   const [currentSelector, setCurrentSelector] = useState(templateIndex >= 0 ? templates[templateIndex].selectors[selectorIndex] : ' ');
-
+  const [currentTemplate, setCurrentTemplate] = useState(templates[0]);
+  
   if (!ready) setTimeout(() => setReady(true), 1000);
   const defaultNode = {
     followables: ['elements', 'classes', 'ids', 'attributes', 'psuedos'],
@@ -23,6 +26,9 @@ function App() {
   };
   const selectorUpdatedHandler = (value) => {
     setCurrentSelector(value);
+  }
+  const templateUpdateHandler = (template) => {
+    setCurrentTemplate(template);
   }
   return (
     <div className="App">
@@ -45,17 +51,21 @@ function App() {
         templateClass={topSelectorClass}
         templates={templates}
         templateIndex={templateIndex}
+        onTemplateSelected={templateUpdateHandler}
       />
       {templateIndex === -1 && <SelectorBuilder
         ready={ready}
         baseSelector={`.${topSelectorClass}`}
         defaultNode={defaultNode}
+        currentTemplate={currentTemplate}
         onSelectorUpdated={selectorUpdatedHandler}
       />}
       <PropertyManager
         templateClass={topSelectorClass}
         currentSelector={currentSelector}
+        currentTemplate={currentTemplate}
       />
+      <PropertyItemizer />
     </div>
   );
 }

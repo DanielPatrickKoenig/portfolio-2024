@@ -10,7 +10,12 @@ const SelectorBuilder = (props) => {
     const [nodeData, setNodeData] = useState([]);
     const [active, setActive] = useState(false);
 
-    useEffect(() => { setActive(true) }, [props.ready])
+    useEffect(() => { setActive(true) }, [props.ready]);
+
+    useEffect (() => {
+        setNodeData([]);
+        setSelectorValue('');
+    }, [props.currentTemplate]);
 
     const createBuildMatrix = (entry) => {
         return buildMatrix(entry.selector === '', props.baseSelector, entry, selectorData);

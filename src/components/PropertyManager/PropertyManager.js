@@ -6,6 +6,7 @@ const PropertyManager = (props) => {
     const [propertyList, setPropertyList] = useState([]);
     const [editing, setEditing] = useState(false);
     const [styleObject, setStyleObject] = useState({});
+    const [activeSelector, setActiveSelector] = useState(props.currentSelector);
     const selectionCompleteHandler = (selectedProperties) => {
         setPropertyList(selectedProperties);
         setEditing(true);
@@ -40,15 +41,32 @@ const PropertyManager = (props) => {
     useEffect (() => {
         const tempStyleObject = addTempSelector(props.currentSelector, `.${props.templateClass} `);
         setStyleObject(tempStyleObject);
+        setActiveSelector(`.${props.templateClass} ${props.currentSelector}`);
     }, [props.currentSelector]);
+
+    useEffect (() => {
+        const tempStyleObject = {};
+        props.currentTemplate.selectors.forEach(item => {
+            tempStyleObject[`.${props.templateClass} ${item}`] = {};
+        });
+        setStyleObject(tempStyleObject);
+    }, [props.currentTemplate]);
+    
     return (
         <div>
+            <select onChange={(e) => setActiveSelector(e.target.value)}>
+                {Object.keys(styleObject).map(item => (
+                    <option value={item}>
+                        {item}
+                    </option>
+                ))};
+            </select>
             {editing && (
                 <Fragment>
                     {Object.keys(styleObject).map(item => (
                         <div 
                             key={item}
-                            style={{display: item === `.${props.templateClass} ${props.currentSelector}` ? 'block' : 'none'}}
+                            style={{display: item === activeSelector ? 'block' : 'none'}}
                         >
                             <p>Selector: {item}</p>
                             <PropertyEditor 
