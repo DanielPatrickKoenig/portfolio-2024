@@ -7,16 +7,22 @@ const PortfolioItem = (props) => {
         const x = Math.round(jstrig.orbit(0, 300, rotation, 'cos'));
         const z =  Math.round(jstrig.orbit(0, -100, rotation, 'sin'));
         const inCenter = rotation % 360 === 0 || rotation === 0;
-        const xRot = inCenter ? -40 : -30;
-        const transform = `translateX(${x}px) translateY(${z}px) rotateX(${xRot}deg) rotateY(${rotation}deg) rotateZ(${x * .1}deg) scale(${1 - (Math.abs(x) / 600)})`;
-        const transformbottom = `translateX(${x * .88}px) translateY(${z + 120}px) rotateX(0deg) rotateY(${rotation}deg) rotateZ(0deg) scale(${1 - (Math.abs(x) / 600)})`;
-        return { top:{ transform }, bottom: { transform: transformbottom } };
+        const xRot = inCenter ? -30 : -30;
+        const xRotation = z < 0 ? xRot * -1 : xRot;
+        const zRot = x * .125;
+        const zRotation = z < 0 ? zRot * -.8 : zRot;
+        const scaleFactor = z < 0 ? .5 : 1 - (Math.abs(x) / 600);
+        const transform = `translateX(${x}px) translateY(${z}px) rotateX(${xRotation}deg) rotateY(${rotation}deg) rotateZ(${zRotation}deg) scale(${scaleFactor})`;
+        const transformbottom = `translateX(${x}px) translateY(${z}px) rotateX(0deg) rotateY(${rotation}deg) rotateZ(0deg) scale(${scaleFactor})`;
+        const opacity = 1 - Math.abs(x * .0034) - (z < 0 ? .25 : 0);
+        const filter = z < 0 ? 'blur(6px)' : 'unset';
+        return { top:{ transform, opacity, filter }, bottom: { transform: transformbottom, opacity, filter } };
     }
     return (
         <Fragment>
             <div 
-                className={`portfolio-item-bottom portfolio-item--bottom${props.itemId}`}
-                style={itemStyle().bottom}
+                className={`portfolio-item portfolio-item-${props.itemId}`}
+                style={itemStyle().top}
             >
                 <div className="inner-portfolio-item">
                     { props.itemId }
@@ -25,8 +31,8 @@ const PortfolioItem = (props) => {
                 {/* {JSON.stringify(itemStyle())} */}
             </div>
             <div 
-                className={`portfolio-item portfolio-item-${props.itemId}`}
-                style={itemStyle().top}
+                className={`portfolio-item-bottom portfolio-item-bottom-${props.itemId}`}
+                style={itemStyle().bottom}
             >
                 <div className="inner-portfolio-item">
                     { props.itemId }
