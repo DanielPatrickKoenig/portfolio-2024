@@ -1,0 +1,59 @@
+.portfolio-item,
+.portfolio-item-bottom{
+    width: 0;
+    height: 0;
+    backface-visibility: hidden;
+    transition: transform, .5s;
+    top: 50%;
+    left: 50%;
+    position: absolute;
+}
+.portfolio-item .inner-portfolio-item,
+.portfolio-item-bottom .inner-portfolio-item{
+    width: 200px;
+    height: 200px;
+    border-radius: 20% 20% 0 0;
+    background-color: #cccccc;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.portfolio-item-bottom .inner-portfolio-item{
+    border-radius: 0;
+    width: 180px;
+}
+.portfolio-item-0 .inner-portfolio-item{
+    background-image: url('https://media.4-paws.org/a/f/4/7/af47ae6aa55812faa4d7fd857a6e283a8c8226bc/VIER%20PFOTEN_2019-07-18_013-2890x2000-1920x1329.jpg');
+}
+.portfolio-item-1 .inner-portfolio-item{
+    background-image: url('https://i0.wp.com/natureinnovato.com/wp-content/uploads/2018/06/Mallard-Pieter-Pieterse-6x4.jpg?ssl=1');
+}
+.portfolio-item-2 .inner-portfolio-item{
+    background-image: url('https://cdn.britannica.com/92/100692-050-5B69B59B/Mallard.jpg');
+}
+.portfolio-item-3 .inner-portfolio-item{
+    background-image: url('https://images.squarespace-cdn.com/content/v1/5ab8127a8ab722e391b53234/1525981919349-PNZJ8P9R1VRMFP6H4KUX/10429481_10153113262500239_6289547517468470839_n.jpg');
+}
+.portfolio-item-4 .inner-portfolio-item{
+    background-image: url('https://cdn.britannica.com/42/58842-050-6E524F71/Mandarin-duck-Aix-galericulata.jpg');
+}
+.portfolio-item-5 .inner-portfolio-item{
+    background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/b/bf/Anas_platyrhynchos_male_female_quadrat.jpg/800px-Anas_platyrhynchos_male_female_quadrat.jpg');
+}
+.portfolio-item-6 .inner-portfolio-item{
+    background-image: url('https://nutrenaworld.com/wp-content/uploads/2024/01/poultry_blog_why-keep-ducks_820x525.jpg');
+}
+.portfolio-item-7 .inner-portfolio-item{
+    background-image: url('https://homeinthefingerlakes.com/wp-content/uploads/2020/04/Ducks-0025-718x1024.jpg');
+}
+.portfolio-item-8 .inner-portfolio-item{
+    background-image: url('https://upload.wikimedia.org/wikipedia/commons/b/bf/Bucephala-albeola-010.jpg');
+}
+.portfolio-item-9 .inner-portfolio-item{
+    background-image: url('https://www.dereknielsen.com/wp-content/uploads/2024/02/Stunning-display.jpg');
+}
