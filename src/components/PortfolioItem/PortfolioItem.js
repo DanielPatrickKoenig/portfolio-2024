@@ -16,7 +16,22 @@ const PortfolioItem = (props) => {
         const transformbottom = `translateX(${x}px) translateY(${z}px) rotateX(0deg) rotateY(${rotation}deg) rotateZ(0deg) scale(${scaleFactor})`;
         const opacity = 1 - Math.abs(x * .0034) - (z < 0 ? .25 : 0);
         const filter = z < 0 ? 'blur(6px)' : 'unset';
-        return { top:{ transform, opacity, filter }, bottom: { transform: transformbottom, opacity, filter } };
+        const backroundImage = `url('${props.data.cardBg}')`;
+        return {
+            top:{ 
+                transform,
+                opacity,
+                filter 
+            },
+            bottom: {
+                transform: transformbottom,
+                opacity,
+                filter
+            },
+            bg: {
+                'background-image': backroundImage
+            }
+        };
     }
     return (
         <Fragment>
@@ -24,7 +39,10 @@ const PortfolioItem = (props) => {
                 className={`portfolio-item portfolio-item-${props.itemId}`}
                 style={itemStyle().top}
             >
-                <div className="inner-portfolio-item">
+                <div
+                    className="inner-portfolio-item"
+                    style={itemStyle().bg}
+                >
                     { props.itemId }
                 </div>
                 
@@ -34,7 +52,10 @@ const PortfolioItem = (props) => {
                 className={`portfolio-item-bottom portfolio-item-bottom-${props.itemId}`}
                 style={itemStyle().bottom}
             >
-                <div className="inner-portfolio-item">
+                <div
+                    className="inner-portfolio-item"
+                    style={itemStyle().bg}
+                >
                     { props.itemId }
                 </div>
                 
