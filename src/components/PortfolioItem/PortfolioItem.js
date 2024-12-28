@@ -16,17 +16,20 @@ const PortfolioItem = (props) => {
         const transformbottom = `translateX(${x}px) translateY(${z}px) rotateX(0deg) rotateY(${rotation}deg) rotateZ(0deg) scale(${scaleFactor})`;
         const opacity = 1 - Math.abs(x * .0034) - (z < 0 ? .25 : 0);
         const filter = z < 0 ? 'blur(6px)' : 'unset';
+        const zIndex = Math.round(z);
         const backroundImage = `url('${props.data.cardBg}')`;
         return {
             top:{ 
                 transform,
                 opacity,
-                filter 
+                filter,
+                zIndex
             },
             bottom: {
                 transform: transformbottom,
                 opacity,
-                filter
+                filter,
+                zIndex
             },
             bg: {
                 'background-image': backroundImage
@@ -42,9 +45,7 @@ const PortfolioItem = (props) => {
                 <div
                     className="inner-portfolio-item"
                     style={itemStyle().bg}
-                >
-                    { props.itemId }
-                </div>
+                />
                 
                 {/* {JSON.stringify(itemStyle())} */}
             </div>
@@ -55,9 +56,7 @@ const PortfolioItem = (props) => {
                 <div
                     className="inner-portfolio-item"
                     style={itemStyle().bg}
-                >
-                    { props.itemId }
-                </div>
+                />
                 
                 {/* {JSON.stringify(itemStyle())} */}
             </div>

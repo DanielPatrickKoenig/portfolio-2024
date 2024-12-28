@@ -6,9 +6,14 @@ function App() {
   const [appData, setAppData] = useState({});
 
   const loadData = async () => {
-    const response = await fetch('https://danielpatrickkoenig.github.io/shared-app-resources/pData.json');
-    const json = await response.json();
-    setAppData(json);
+    try{
+      const response = await fetch('https://danielpatrickkoenig.github.io/shared-app-resources/pData.json');
+      const json = await response.json();
+      setAppData(json);
+    }
+    catch(e){
+      console.error(e);
+    }
   };
 
   loadData();

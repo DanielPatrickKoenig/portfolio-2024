@@ -36,6 +36,9 @@ const Portfolio = (props) => {
                 data={item}
             />
         ))}
+        <div class="info-panel-1">
+            {props?.data?.items?.length && <h2>{props?.data?.items[pIndex].title}</h2>}
+        </div>
         <div className="nav-buttons">
             <button onClick={() => changeItem(pAngle + angleJump, -1)}>
                 &lt;
