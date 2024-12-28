@@ -22,13 +22,13 @@ const PortfolioItem = (props) => {
             top:{ 
                 transform,
                 opacity,
-                filter,
+                // filter,
                 zIndex
             },
             bottom: {
                 transform: transformbottom,
                 opacity,
-                filter,
+                // filter,
                 zIndex
             },
             bg: {

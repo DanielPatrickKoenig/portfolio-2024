@@ -36,9 +36,16 @@ const Portfolio = (props) => {
                 data={item}
             />
         ))}
-        <div class="info-panel-1">
-            {props?.data?.items?.length && <h2>{props?.data?.items[pIndex].title}</h2>}
-        </div>
+        {props?.data?.items?.length && <div class="info-panel-1">
+            {props?.data?.items?.map((item, index) => (
+                <h2 
+                    className={index === pIndex ? 'active' : 'inactive'}
+                    aria-hidden={index !== pIndex}
+                >
+                    {item.title}
+                </h2>))
+            }
+        </div>}
         <div className="nav-buttons">
             <button onClick={() => changeItem(pAngle + angleJump, -1)}>
                 &lt;

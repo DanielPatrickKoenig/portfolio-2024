@@ -15,8 +15,9 @@ function App() {
       console.error(e);
     }
   };
-
-  loadData();
+  if (!Object.keys(appData).length) {
+    loadData();
+  }
   return (
     <Portfolio data={appData} />
   );

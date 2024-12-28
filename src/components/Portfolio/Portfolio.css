@@ -2,11 +2,11 @@
     perspective: 500px;
     perspective-origin: center;
     width: 100%;
-    height: 800px;
+    height: 1400px;
     margin: 0 auto;
     position: absolute;
     left: 50%;
-    transform: translate(-50%, -30%);
+    transform: translate(-50%, -57%);
     overflow: hidden;
 
 }
@@ -33,18 +33,70 @@
     display: flex;
     align-items: flex-end;
     justify-content: center;
+    backdrop-filter: blur(10px);
 }
 
 .info-panel-1 h2{
-    padding-bottom: 300px;
-    font-size: 46px;
+    padding-bottom: 440px;
+    font-size: 36px;
     position: relative;
+    text-align: center;
+    max-width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.1;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: opacity .5s;
+    animation-iteration-count: 1;
+    animation-duration: .5s;
+    
+}
+@keyframes activate {
+    0%{
+        bottom: -50px;
+        /* filter: blur(20px); */
+    }
+    50%{
+        bottom: 0px;
+        /* filter: blur(20px); */
+    }
+    100%{
+        bottom: 0px;
+        /* filter: blur(0px); */
+    }
+}
+@keyframes deactivate {
+    0%{
+        bottom: 0px;
+        /* filter: blur(0px); */
+    }
+    50%{
+        bottom: 50px;
+        /* filter: blur(20px); */
+    }
+    100%{
+        bottom: 50px;
+        /* filter: blur(20px); */
+    }
+}
+.info-panel-1 h2.active{
+    opacity: 1;
+    animation-name: activate;
+    animation-timing-function: ease-in;
+}
+.info-panel-1 h2.inactive{
+    opacity: 0;
+    animation-name: deactivate;
+    animation-timing-function: ease-in;
 }
 
 .info-panel-1::before{
     content: '';
     display: block;
-    width: 250px;
+    width: 270px;
     height: 100%;
     opacity: .5;
     top: 0;
