@@ -1,9 +1,11 @@
 import './App.css';
 import Portfolio from './components/Portfolio/Portfolio';
 import { useState } from 'react';
+import PortfolioItemDetails from './components/PortfolioItemDetails/PortfolioItemDetails';
 
 function App() {
   const [appData, setAppData] = useState({});
+  const [currentItem, setCurrentItem] = useState({});
 
   const loadData = async () => {
     try{
@@ -15,11 +17,17 @@ function App() {
       console.error(e);
     }
   };
+  const itemChangeHandler = (item) => {
+    setCurrentItem(item);
+  } 
   if (!Object.keys(appData).length) {
     loadData();
   }
   return (
-    <Portfolio data={appData} />
+    <frameElement>
+      <Portfolio data={appData} onItemChange={itemChangeHandler} />
+      <PortfolioItemDetails data={currentItem} />
+    </frameElement>
   );
 }
 
