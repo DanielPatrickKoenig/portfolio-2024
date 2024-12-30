@@ -10,16 +10,6 @@
     overflow: hidden;
 }
 
-.nav-buttons{
-    margin: 0 auto;
-    text-align: center;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    z-index: 150;
-}
-
 .info-panel-1{
     width: 300px;
     height: 100%;

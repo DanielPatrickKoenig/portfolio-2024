@@ -1,4 +1,5 @@
 import PortfolioItem from "../PortfolioItem/PortfolioItem";
+import PortfolioItemNav from "../PortfolioItemNav/PortfolioItemNav";
 import { useState, useEffect } from "react";
 import './Portfolio.css';
 // import PortfolioItemDetails from "../PortfolioItemDetails/PortfolioItemDetails";
@@ -49,14 +50,10 @@ const Portfolio = (props) => {
                 </h2>))
             }
         </div>}
-        <div className="nav-buttons">
-            <button onClick={() => changeItem(pAngle + angleJump, -1)}>
-                &lt;
-            </button>
-            <button onClick={() => changeItem(pAngle - angleJump, 1)}>
-                &gt;
-            </button>
-        </div>
+        <PortfolioItemNav
+            onMoveLeft={() => changeItem(pAngle + angleJump, -1)}
+            onMoveRight={() => changeItem(pAngle - angleJump, 1)}
+        />
         
     </div>);
 }
