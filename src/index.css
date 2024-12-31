@@ -39,3 +39,19 @@ body::before{
   box-shadow: 0 500px 0 rgba(197,197,197,0.6);
 }
 
+.btn{
+  display: flex;
+  margin: 0 auto 8px;
+  width: 180px;
+  height: 44px;
+  justify-content: center;
+  align-items: center;
+  background-color: #333333;
+  box-shadow: 0 0 0 2px #ffffff inset;
+  border: none;
+  color: #ffffff;
+  border-radius: 60px;
+  text-decoration: none;
+  cursor: pointer;
+}
+

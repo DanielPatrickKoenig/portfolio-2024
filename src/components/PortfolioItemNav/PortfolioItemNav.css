@@ -13,10 +13,12 @@
     touch-action: pan-y;
 }
 .nav-buttons button:first-child{
-    margin-right: 150px;
+    margin-right: 120px;
+    width: 44px;
 }
 .nav-buttons button:last-child{
-    margin-left: 150px;
+    margin-left: 120px;
+    width: 44px;
 }
 
 @media screen and (min-width: 768px) {

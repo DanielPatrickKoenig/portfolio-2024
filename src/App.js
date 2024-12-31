@@ -1,7 +1,8 @@
 import './App.css';
 import Portfolio from './components/Portfolio/Portfolio';
-import { useState } from 'react';
+import { Fragment, useState } from 'react';
 import PortfolioItemDetails from './components/PortfolioItemDetails/PortfolioItemDetails';
+import TopNav from './components/TopNav/TopNav';
 
 function App() {
   const [appData, setAppData] = useState({});
@@ -24,10 +25,11 @@ function App() {
     loadData();
   }
   return (
-    <frameElement>
+    <Fragment>
+      <TopNav />
       <Portfolio data={appData} onItemChange={itemChangeHandler} />
       <PortfolioItemDetails data={currentItem} />
-    </frameElement>
+    </Fragment>
   );
 }
 

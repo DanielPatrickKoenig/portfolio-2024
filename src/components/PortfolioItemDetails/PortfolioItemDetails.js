@@ -16,8 +16,23 @@ const PortfolioItemDetails = (props) => {
     ];
     return (
         <div class="portfolio-item-details">
-            {props.data?.link && <a href={props.data.link} target="_blank">Visit Site</a>}
-            {props.data?.video && <button>Watch Video</button>}
+            {props.data?.link && (
+                <a
+                    className="btn"
+                    href={props.data.link}
+                    target="_blank"
+                >
+                    Visit Site
+                </a>
+            )}
+            {props.data?.video && (
+                <button
+                    class="btn"
+                    onClick={() => {}}
+                >
+                    Watch Video
+                </button>
+            )}
             <ul>
                 {conetentStruture
                     .filter(item => props.data[item.id])

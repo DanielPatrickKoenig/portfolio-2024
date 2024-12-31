@@ -35,10 +35,16 @@ const PortfolioItemNav = (props) => {
             onTouchMove={swipeMove}
             onTouchEnd={swipeEnd}
         >
-            <button onClick={() => props.onMoveLeft()}>
+            <button
+                className="btn"
+                onClick={() => props.onMoveLeft()}
+            >
                 &lt;
             </button>
-            <button onClick={() => props.onMoveRight()}>
+            <button
+                className="btn"
+                onClick={() => props.onMoveRight()}
+            >
                 &gt;
             </button>
         </div>
