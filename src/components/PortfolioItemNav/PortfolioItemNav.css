@@ -12,9 +12,40 @@
     align-items: center;
     touch-action: pan-y;
 }
+.nav-buttons button{
+    position: relative;
+    overflow: hidden;
+}
+.nav-buttons button::after,
+.nav-buttons button::before{
+    content: '';
+    width: 40%;
+    height: 40%;
+    display: block;
+    position: absolute;
+
+}
+.nav-buttons button::before{
+    transform: translateX(-50%) rotate(45deg);
+    background-color: #ffffff;
+    left: 45%
+}
+.nav-buttons button::after{
+    transform: translateX(-50%) rotate(45deg);
+    background-color: #333333;
+    left: 30%;
+    width: 35%;
+    height: 35%;
+}
 .nav-buttons button:first-child{
     margin-right: 120px;
     width: 44px;
+}
+.nav-buttons button:first-child::before{
+    left: 55%;
+}
+.nav-buttons button:first-child::after{
+    left: 70%;
 }
 .nav-buttons button:last-child{
     margin-left: 120px;

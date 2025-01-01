@@ -38,15 +38,13 @@ const PortfolioItemNav = (props) => {
             <button
                 className="btn"
                 onClick={() => props.onMoveLeft()}
-            >
-                &lt;
-            </button>
+                aria-label="left button"
+            />
             <button
                 className="btn"
                 onClick={() => props.onMoveRight()}
-            >
-                &gt;
-            </button>
+                aria-label="right button"
+            />
         </div>
     );
 };
