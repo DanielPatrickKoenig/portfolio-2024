@@ -20,6 +20,15 @@
     padding: 10px 0 0;
     display: block;
 }
+.portfolio-item-details h3{
+    font-size: 26px;
+    margin: 0;
+    padding: 8px 0;
+}
+.portfolio-item-details p{
+    margin: 0;
+    padding: 0 0 6px;
+}
 @media screen and (min-width: 768px) {
     .portfolio-item-details{
         width: 768px;
