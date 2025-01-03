@@ -3,10 +3,13 @@ import Portfolio from './components/Portfolio/Portfolio';
 import { Fragment, useState } from 'react';
 import PortfolioItemDetails from './components/PortfolioItemDetails/PortfolioItemDetails';
 import TopNav from './components/TopNav/TopNav';
+import ModalContent from './components/ModalContent/ModalContent';
 
 function App() {
   const [appData, setAppData] = useState({});
   const [currentItem, setCurrentItem] = useState({});
+  const [showModal, setShowModal] = useState(false);
+  const [videoData, setVideoData] = useState('');
 
   const loadData = async () => {
     try{
@@ -18,6 +21,10 @@ function App() {
       console.error(e);
     }
   };
+  const videoHandler = (e) => {
+    setShowModal(true);
+    setVideoData(e);
+  }
   const itemChangeHandler = (item) => {
     setCurrentItem(item);
   } 
@@ -28,7 +35,15 @@ function App() {
     <Fragment>
       <TopNav />
       <Portfolio data={appData} onItemChange={itemChangeHandler} />
-      <PortfolioItemDetails data={currentItem} />
+      <PortfolioItemDetails
+        data={currentItem}
+        onVideoClicked={videoHandler}
+      />
+      {showModal && (<ModalContent
+        onClose={() => setShowModal(false)}
+      >
+        {videoData && <p>{videoData}</p>}
+      </ModalContent>)}
     </Fragment>
   );
 }

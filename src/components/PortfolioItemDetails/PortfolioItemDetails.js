@@ -28,7 +28,7 @@ const PortfolioItemDetails = (props) => {
             {props.data?.video && (
                 <button
                     class="btn"
-                    onClick={() => {}}
+                    onClick={() => props.onVideoClicked(props.data?.video)}
                 >
                     Watch Video
                 </button>
