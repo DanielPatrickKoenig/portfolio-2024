@@ -34,8 +34,8 @@
 .modal-content .close-button::before,
 .modal-content .close-button::after{
     content: '';
-    width: 20%;
-    height: 90%;
+    width: 15%;
+    height: 65%;
     top: 50%;
     left: 50%;
     display: block;

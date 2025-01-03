@@ -1,10 +1,7 @@
 import './ModalContent.css';
 const ModalContent = (props) => {
     return (
-        <div
-            className="modal-content"
-            onClick={() => { if(props.onClose) props.onClose(); }}
-        >
+        <div className="modal-content">
             <div class="inner-modal-content">
                 {props.children}
             </div>
