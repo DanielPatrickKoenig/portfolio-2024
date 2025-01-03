@@ -13,8 +13,47 @@
 
 .modal-content .inner-modal-content{
     width: 310px;
-    max-height: 84vw;
-    min-height: 50vw;
+    height: 86vh;
+    min-height: 250px;
     background-color: #dddddd;
     border-radius: 12px;
+    overflow: auto;
+    position: relative;
+}
+
+.modal-content .close-button{
+    border: none;
+    background: none;
+    width: 44px;
+    height: 44px;
+    position: absolute;
+    top: 5px;
+    right: 5px;
+}
+
+.modal-content .close-button::before,
+.modal-content .close-button::after{
+    content: '';
+    width: 20%;
+    height: 90%;
+    top: 50%;
+    left: 50%;
+    display: block;
+    background-color: #ffffff;
+    transform-origin: center;
+    position: absolute;
+}
+.modal-content .close-button::before{
+    transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.modal-content .close-button::after{
+    transform: translate(-50%, -50%) rotate(-45deg);
+}
+
+@media screen and (min-width: 768px) {
+    .modal-content .close-button{
+        right: 50%;
+        transform: translateX(220px);
+    }
 }

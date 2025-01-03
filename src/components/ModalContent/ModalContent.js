@@ -8,7 +8,7 @@ const ModalContent = (props) => {
             <div class="inner-modal-content">
                 {props.children}
             </div>
-            {props.onCloseClicked && (
+            {props.onClose && (
                 <button
                     className="close-button"
                     aria-label="close"

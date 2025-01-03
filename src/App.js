@@ -4,6 +4,7 @@ import { Fragment, useState } from 'react';
 import PortfolioItemDetails from './components/PortfolioItemDetails/PortfolioItemDetails';
 import TopNav from './components/TopNav/TopNav';
 import ModalContent from './components/ModalContent/ModalContent';
+import PortfolioVideo from './components/PortfolioVideo/PortfolioVideo';
 
 function App() {
   const [appData, setAppData] = useState({});
@@ -42,7 +43,7 @@ function App() {
       {showModal && (<ModalContent
         onClose={() => setShowModal(false)}
       >
-        {videoData && <p>{videoData}</p>}
+        {videoData && <PortfolioVideo vid={videoData} />}
       </ModalContent>)}
     </Fragment>
   );
