@@ -41,6 +41,7 @@ const PortfolioItem = (props) => {
             <div 
                 className={`portfolio-item portfolio-item-${props.itemId}`}
                 style={itemStyle().top}
+                role="presentation"
             >
                 <div
                     className="inner-portfolio-item"
@@ -52,6 +53,7 @@ const PortfolioItem = (props) => {
             <div 
                 className={`portfolio-item-bottom portfolio-item-bottom-${props.itemId}`}
                 style={itemStyle().bottom}
+                role="presentation"
             >
                 <div
                     className="inner-portfolio-item"

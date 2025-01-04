@@ -16,6 +16,7 @@ const PortfolioItemDetails = (props) => {
     ];
     return (
         <div class="portfolio-item-details">
+            <h2 className="visually-hidden">{props.data.title}</h2>
             {props.data?.link && (
                 <a
                     className="btn"

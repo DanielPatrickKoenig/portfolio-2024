@@ -39,6 +39,7 @@ header nav a{
     display: block;
     border-bottom: 1px solid #000000;
     font-weight: bold;
+    text-decoration: none;
 }
 
 header .nav-toggle{

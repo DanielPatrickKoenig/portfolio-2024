@@ -40,7 +40,7 @@ const Portfolio = (props) => {
                 data={item}
             />
         ))}
-        {props?.data?.items?.length && <div class="info-panel-1">
+        {props?.data?.items?.length && <div class="info-panel-1" role="presentation">
             {props?.data?.items?.map((item, index) => (
                 <h2 
                     className={index === pIndex ? 'active' : 'inactive'}
