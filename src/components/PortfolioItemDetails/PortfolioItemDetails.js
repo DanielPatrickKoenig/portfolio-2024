@@ -22,6 +22,7 @@ const PortfolioItemDetails = (props) => {
                     className="btn"
                     href={props.data.link}
                     target="_blank"
+                    title="Visit Site"
                 >
                     Visit Site
                 </a>
@@ -30,9 +31,20 @@ const PortfolioItemDetails = (props) => {
                 <button
                     class="btn"
                     onClick={() => props.onVideoClicked(props.data?.video)}
+                    title="Watch Video"
                 >
                     Watch Video
                 </button>
+            )}
+            {props.data?.demo && (
+                <a
+                    class="btn"
+                    href={props.data.demo}
+                    target="_blank"
+                    title="Visit Demo"
+                >
+                    Visit Demo
+                </a>
             )}
             <ul>
                 {conetentStruture
