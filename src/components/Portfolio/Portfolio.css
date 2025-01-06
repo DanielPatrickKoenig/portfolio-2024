@@ -36,40 +36,35 @@
     margin-right: auto;
     line-height: 1.1;
     position: absolute;
-    bottom: 0;
+    bottom: 12px;
     left: 50%;
     transform: translateX(-50%);
+    opacity: 0;
     transition: opacity .5s;
+    transition-timing-function: ease-in-out;
     animation-iteration-count: 1;
+    animation-timing-function: ease-in-out;
     animation-duration: .5s;
     
 }
 @keyframes activate {
     0%{
-        bottom: -50px;
-        /* filter: blur(20px); */
-    }
-    50%{
-        bottom: 0px;
-        /* filter: blur(20px); */
+        bottom: -18px;
+        filter: blur(3px);
     }
     100%{
-        bottom: 0px;
-        /* filter: blur(0px); */
+        bottom: 12px;
+        filter: blur(0px);
     }
 }
 @keyframes deactivate {
     0%{
-        bottom: 0px;
-        /* filter: blur(0px); */
-    }
-    50%{
-        bottom: 50px;
-        /* filter: blur(20px); */
+        bottom: 12px;
+        filter: blur(0px);
     }
     100%{
-        bottom: 50px;
-        /* filter: blur(20px); */
+        bottom: 32px;
+        filter: blur(3px);
     }
 }
 .info-panel-1 h2.active{

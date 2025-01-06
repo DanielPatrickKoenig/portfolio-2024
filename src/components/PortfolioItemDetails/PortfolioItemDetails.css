@@ -20,6 +20,7 @@
     justify-content: flex-start;
     align-items: center;
     width: 300px;
+    max-width: 90vw;
 }
 .portfolio-item-details ul li{
     width: 100%;
